@@ -1,0 +1,41 @@
+@import "../abstracts/mixins";
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 1.5;
+    color: rgb(58, 58, 58);
+    box-sizing: border-box;
+}
+
+.complete-page {
+    background-color: #f6f5f5;
+}
+
+html {
+    // defines that 1rem is 10px
+    font-size: 62.5%;
+
+    @include media(xl) {
+        font-size: 75%; //75% of 16 is 12px
+    }
+
+    @include media(tablet-l) {
+        font-size: 56.25%; //56.25% of 16 is 9px
+    }
+
+    @include media(tablet-p) {
+        font-size: 50%; //50% of 16 is 8px
+    }
+
+    @include media(phone) {
+        font-size: 50%; //50% of 16 is 8px
+    }
+}
