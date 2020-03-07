@@ -1,0 +1,80 @@
+@import "../abstracts/variables";
+
+.header-container {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    width: 100%;
+    min-height: 60rem;
+    background-image: url("../../images/parts1.jpg");
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        background-color: black;
+        opacity: 0.5;
+    }
+}
+
+.header-main {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    width: 75%;
+    padding: 2% 0;
+    animation: fadeInHead 1.5s;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: #d53369; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+            to right,
+            #eec75e,
+            #d53369
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to right,
+            #f5bc41,
+            #d53369
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        position: absolute;
+        clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+    }
+}
+
+.header-btn {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    width: 20rem;
+    transform: translate(-50%, -50%);
+    font-family: "PT Sans", sans-serif;
+    animation: fadeInBtn 1.2s;
+    animation-delay: 0.8s;
+    animation-fill-mode: backwards;
+}

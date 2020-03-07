@@ -1,0 +1,132 @@
+.hook {
+    height: 50rem;
+    position: relative;
+
+    &-container {
+        height: 40rem;
+        margin: 0 0%;
+        top: -5%;
+        width: 100%;
+        position: relative;
+    }
+
+    &-inner-container {
+        height: 100%;
+        top: 20%;
+        position: relative;
+    }
+
+    &-head {
+        margin-top: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-family: "PT Sans", sans-serif;
+        font-size: 4rem;
+    }
+
+    &-body {
+        text-align: center;
+        line-height: 1.5;
+        font-size: 2rem;
+    }
+
+    &-btn-container {
+        text-align: center;
+        top: 35%;
+        transform: translateY(-50%);
+        position: relative;
+        height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-btn:link,
+    &-btn:visited {
+        margin: 8%;
+        text-decoration: none;
+        color: black;
+        height: 20rem;
+        width: 50rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation-fill-mode: both;
+        transition: 0.5s;
+        border-radius: 8px;
+        border: black solid 3px;
+    }
+
+    &-btn p {
+        transition: 0.4s;
+        position: relative;
+        font-family: "Chakra Petch", sans-serif;
+    }
+
+    &-btn:hover p {
+        font-size: 2.8rem;
+        color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+}
+
+.build {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        background-image: url("../../images/build.jpg");
+        background-size: cover;
+        background-position: top;
+        transition: 0.3s;
+        top: 100%;
+        visibility: hidden;
+        filter: blur(0);
+    }
+
+    &:hover::after {
+        top: 0;
+        visibility: visible;
+        filter: blur(2.5px);
+    }
+}
+
+.upgrade {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        background-image: url("../../images/upgrade.jpg");
+        background-size: cover;
+        background-position: top;
+        transition: 0.3s;
+        top: 100%;
+        visibility: hidden;
+        filter: blur(0);
+    }
+
+    &:hover::after {
+        top: 0;
+        visibility: visible;
+        filter: blur(2.5px);
+    }
+}

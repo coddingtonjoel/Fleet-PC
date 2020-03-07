@@ -1,8 +1,11 @@
 //materialize-css
-@import "./materialize/materialize.scss";
+@import "./materialize/sass/materialize.scss";
 
 @import "./abstracts/mixins";
 
 @import "./base/reset";
+@import "./base/animations";
 
 @import "./components/navbar";
+@import "./components/header";
+@import "./components/hook";

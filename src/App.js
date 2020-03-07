@@ -1,13 +1,15 @@
 import React from "react";
 import "./sass/main.scss";
 import Navbar from "./components/Navbar";
-import Homeheader from "./components/pages/Homeheader";
+import Header from "./components/pages/Home/Header";
+import Hook from "./components/pages/Home/Hook";
 
 function App() {
     return (
         <div className="complete-page">
             <Navbar />
-            <Homeheader />
+            <Header />
+            <Hook />
         </div>
     );
 }
