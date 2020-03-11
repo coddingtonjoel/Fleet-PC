@@ -1,0 +1,98 @@
+.presets {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    background-image: url("../../images/parts6.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75rem;
+    position: relative;
+    width: 100%;
+    position: relative;
+    padding-top: 15rem;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    &-head {
+        color: black;
+        padding-top: 20rem;
+        text-align: center;
+        position: relative;
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 4rem;
+        width: 75%;
+        padding: 2% 0;
+        z-index: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &::after {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: #d53369; /* fallback for old browsers */
+            background: -webkit-linear-gradient(
+                to right,
+                #eec75e,
+                #d53369
+            ); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(
+                to right,
+                #f5bc41,
+                #d53369
+            ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            position: absolute;
+            clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+        }
+    }
+
+    &-container {
+        height: 100%;
+        margin: 0 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: rgb(34, 34, 34);
+        padding: 3rem 0;
+        border-radius: 12px;
+    }
+
+    &-container-btn {
+        position: absolute;
+        right: 0;
+        height: 40%;
+        width: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-container-btn i {
+        font-size: 3rem;
+        transition: 0.3s;
+    }
+
+    &-container-btn:hover i {
+        transform: translateX(0.4rem);
+    }
+}

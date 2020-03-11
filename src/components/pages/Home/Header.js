@@ -10,7 +10,7 @@ const Header = () => {
             </h1>
             <a
                 href="#!"
-                className="header-btn btn-large waves-effect waves-dark grey-text text-darken-4 white darken-3">
+                className="header-btn btn-large waves-effect grey-text text-darken-4 white darken-3">
                 Start Now
             </a>
         </div>

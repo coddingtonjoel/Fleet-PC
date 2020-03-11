@@ -5,13 +5,11 @@
     width: 100%;
     min-height: 60rem;
     background-image: url("../../images/parts1.jpg");
-    background-position: top;
     background-size: cover;
     position: relative;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 
     &::after {
         content: "";
