@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import M from "materialize-css";
+import logo from "../images/fleet-white.svg";
 
 const Navbar = () => {
     //init materialize-css sidenav
@@ -11,8 +12,8 @@ const Navbar = () => {
         <Fragment>
             <nav className="grey darken-4">
                 <div className="nav-wrapper container">
-                    <a href="#!" className="brand-logo">
-                        Fleet PC
+                    <a href="/" className="brand-logo">
+                        <img className="nav-logo" src={logo} alt="logo" />
                     </a>
                     <a
                         href="#!"

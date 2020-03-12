@@ -36,14 +36,14 @@ const PresetsContainer = () => {
 
 const preset = [
     {
-        title: "Galleon",
+        title: "Barque",
         img: one,
         subtitle: "Business Desktop"
     },
     {
         title: "Submarine",
         img: two,
-        subtitle: "High Performance Desktop"
+        subtitle: "Powerful Desktop for Designers"
     },
     {
         title: "Battleship",
@@ -51,7 +51,7 @@ const preset = [
         subtitle: "High-Tier Gaming Desktop"
     },
     {
-        title: "Barque",
+        title: "Galleon",
         img: four,
         subtitle: "Affordable Gaming Desktop"
     }
