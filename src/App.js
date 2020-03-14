@@ -1,18 +1,23 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import routes from "./routes";
 import "./sass/main.scss";
 import Navbar from "./components/Navbar";
-import Header from "./components/pages/Home/Header";
-import Hook from "./components/pages/Home/Hook";
-import PresetsContainer from "./components/pages/Home/PresetsContainer";
+import Footer from "./components/Footer";
 
 function App() {
+    const routeComponents = routes.map(({ path, component }, key) => (
+        <Route exact path={path} component={component} key={key} />
+    ));
+
     return (
-        <div className="complete-page">
-            <Navbar />
-            <Header />
-            <Hook />
-            <PresetsContainer />
-        </div>
+        <Router>
+            <div className="complete-page">
+                <Navbar />
+                <Switch>{routeComponents}</Switch>
+                <Footer />
+            </div>
+        </Router>
     );
 }
 

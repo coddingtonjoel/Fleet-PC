@@ -53,7 +53,7 @@ const preset = [
     {
         title: "Galleon",
         img: four,
-        subtitle: "Affordable Gaming Desktop"
+        subtitle: "Mid-Tier Gaming Desktop"
     }
 ];
 export default PresetsContainer;

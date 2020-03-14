@@ -64,6 +64,7 @@
         transition: 0.4s;
         position: relative;
         font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
     }
 
     &-btn:hover p {
@@ -87,7 +88,7 @@
         left: 0;
         z-index: -1;
         position: absolute;
-        background-image: url("../../images/build.jpg");
+        background-image: url("../../../../images/build.jpg");
         background-size: cover;
         background-position: top;
         transition: 0.3s;
@@ -116,7 +117,7 @@
         left: 0;
         z-index: -1;
         position: absolute;
-        background-image: url("../../images/upgrade.jpg");
+        background-image: url("../../../../images/upgrade.jpg");
         background-size: cover;
         background-position: top;
         transition: 0.3s;

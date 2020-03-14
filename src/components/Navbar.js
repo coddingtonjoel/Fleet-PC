@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import M from "materialize-css";
-import logo from "../images/fleet-white.svg";
+import logo from "../images/Logo@2x.png";
 
 const Navbar = () => {
     //init materialize-css sidenav

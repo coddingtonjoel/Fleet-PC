@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
     return (
-        <div className="header-container">
+        <main className="header-container">
             <h1 className="header-main">
                 Locally-based PC builds and upgrades
                 <br />
@@ -13,7 +13,7 @@ const Header = () => {
                 className="header-btn btn-large waves-effect grey-text text-darken-4 white darken-3">
                 Start Now
             </a>
-        </div>
+        </main>
     );
 };
 

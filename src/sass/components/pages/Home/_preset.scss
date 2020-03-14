@@ -1,0 +1,49 @@
+.preset {
+    flex: 0 0 20%;
+    margin: 0 1.5rem;
+    border-radius: 4px;
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+        //!important to override materialize-css color class
+        background-color: #303030 !important;
+    }
+
+    &-title {
+        text-align: center;
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 400;
+        font-size: 3rem;
+    }
+
+    &-subtitle {
+        font-size: 1.5rem;
+    }
+
+    &-img {
+        width: 20rem;
+    }
+
+    &-blur {
+        transition: 0.3s;
+    }
+
+    &:hover &-blur {
+        filter: blur(3px);
+    }
+
+    &-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 14rem;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    &:hover &-btn {
+        opacity: 1;
+    }
+}

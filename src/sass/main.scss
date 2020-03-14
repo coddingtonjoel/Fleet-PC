@@ -7,7 +7,9 @@
 @import "./base/animations";
 
 @import "./components/navbar";
-@import "./components/header";
-@import "./components/hook";
-@import "./components/presetscontainer";
-@import "./components/preset";
+@import "./components/footer";
+
+@import "./components/pages/Home/header";
+@import "./components/pages/Home/hook";
+@import "./components/pages/Home/presetscontainer";
+@import "./components/pages/Home/preset";

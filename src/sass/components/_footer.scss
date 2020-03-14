@@ -1,0 +1,41 @@
+.footer {
+    background-color: #1a1a1a;
+    color: #f7f7f7;
+    height: 12rem;
+
+    &-row {
+        margin: 0 !important;
+    }
+
+    &-head {
+        font-family: "Chakra Petch", sans-serif;
+        padding-bottom: 0.5rem;
+    }
+
+    &-link-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+        padding-bottom: 2rem !important;
+    }
+
+    &-link {
+        margin: 2.5rem;
+        width: 10rem;
+        font-size: 1.2rem;
+    }
+
+    &-link-icon {
+        margin: 2.5rem;
+        width: 5rem;
+        font-size: 1.2rem;
+    }
+
+    &-copyright-text {
+        font-size: 1.2rem;
+        //!important to override materialize-css default footer-copyright lighten effects
+        background-color: #1a1a1a !important;
+        color: #a0a0a0 !important;
+    }
+}
