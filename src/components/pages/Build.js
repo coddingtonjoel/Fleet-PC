@@ -1,6 +1,6 @@
 import React from "react";
-import BuildHeader from "./Build/BuildHeader";
-import BuildContainer from "./Build/BuildContainer";
+import BuildHeader from "./Builds/BuildHeader";
+import BuildContainer from "./Builds/BuildContainer";
 
 const Build = (props) => {
     return (
