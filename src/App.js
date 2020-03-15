@@ -1,20 +1,30 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import routes from "./routes";
 import "./sass/main.scss";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from "./components/pages/Home";
+import Build from "./components/pages/Build";
+import Builds from "./Builds";
 
 function App() {
-    const routeComponents = routes.map(({ path, component }, key) => (
-        <Route exact path={path} component={component} key={key} />
-    ));
-
     return (
         <Router>
             <div className="complete-page">
                 <Navbar />
-                <Switch>{routeComponents}</Switch>
+                <Switch>
+                    <Route exact path="/" render={(props) => <Home />} />
+                    {Builds.map((build) => {
+                        return (
+                            <Route
+                                exact
+                                path={`/${build.title}`}
+                                key={build.title}
+                                render={(props) => <Build build={build} />}
+                            />
+                        );
+                    })}
+                </Switch>
                 <Footer />
             </div>
         </Router>

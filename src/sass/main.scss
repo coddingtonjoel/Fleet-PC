@@ -6,10 +6,16 @@
 @import "./base/reset";
 @import "./base/animations";
 
+//Components outside React Router Switch
 @import "./components/navbar";
 @import "./components/footer";
 
+//Home Page
 @import "./components/pages/Home/header";
 @import "./components/pages/Home/hook";
 @import "./components/pages/Home/presetscontainer";
 @import "./components/pages/Home/preset";
+
+//Build Page
+@import "./components/pages/Build/buildheader";
+@import "./components/pages/Build/buildcontainer";

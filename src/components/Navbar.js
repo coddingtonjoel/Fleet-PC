@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <Fragment>
-            <nav className="grey darken-4">
+            <nav className="navbar grey darken-4">
                 <div className="nav-wrapper container">
                     <a href="/" className="brand-logo">
                         <img className="nav-logo" src={logo} alt="logo" />

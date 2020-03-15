@@ -1,4 +1,5 @@
 import React from "react";
+import Builds from "../../../Builds";
 
 const Preset = (props) => {
     return (
@@ -11,7 +12,7 @@ const Preset = (props) => {
                 </p>
             </div>
             <a
-                href="#!"
+                href={`/${props.title}`}
                 className="preset-btn btn white black-text waves-effect">
                 View
             </a>

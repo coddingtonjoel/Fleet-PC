@@ -3,7 +3,7 @@ import Header from "./Home/Header";
 import Hook from "./Home/Hook";
 import PresetsContainer from "./Home/PresetsContainer";
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div>
             <Header />
