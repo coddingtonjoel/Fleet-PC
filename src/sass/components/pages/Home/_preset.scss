@@ -24,6 +24,13 @@
     &-img {
         width: 20rem;
         height: 100%;
+
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5%;
+        }
     }
 
     &-blur {

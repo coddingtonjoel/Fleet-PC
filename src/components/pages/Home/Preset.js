@@ -1,11 +1,12 @@
 import React from "react";
-import Builds from "../../../Builds";
 
 const Preset = (props) => {
     return (
         <div className="preset card-panel grey darken-3 z-depth-3">
             <div className="preset-blur">
-                <img className="preset-img" src={props.img} alt="" />
+                <div className="preset-img-container">
+                    <img className="preset-img" src={props.img} alt="" />
+                </div>
                 <p className="preset-title white-text">{props.title}</p>
                 <p className="preset-subtitle grey-text center">
                     {props.subtitle}
