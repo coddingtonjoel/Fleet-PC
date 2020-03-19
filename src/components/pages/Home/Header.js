@@ -9,7 +9,7 @@ const Header = () => {
                 tailored to your every need.
             </h1>
             <a
-                href="#!"
+                href="/start"
                 className="header-btn btn-large waves-effect grey-text text-darken-4 white darken-3">
                 Start Now
             </a>

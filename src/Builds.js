@@ -5,6 +5,7 @@ import galleon from "./images/galleon.png";
 import yacht from "./images/yacht.png";
 import clipper from "./images/clipper.png";
 import cruiser from "./images/cruiser.png";
+import tartane from "./images/tartane.png";
 
 const Builds = [
     {
@@ -104,6 +105,59 @@ const Builds = [
         people: ["Students", "Businesses", "Employees", "Teachers"]
     },
     {
+        title: "Tartane",
+        img: tartane,
+        subtitle: "Budget Desktop for Design",
+        cpu: {
+            title: "Intel Core i5-9600K",
+            price: 219.99
+        },
+        graphics: {
+            title: "GeForce GTX 1060 3GB",
+            price: 133.99
+        },
+        motherboard: {
+            title: "MSI H310-A PRO",
+            price: 69.99
+        },
+        memory: {
+            title: "16GB DDR4 RAM",
+            price: 69.99
+        },
+        storage: {
+            title: "240GB SSD",
+            price: 39.99
+        },
+        case: {
+            title: "Corsair 110R",
+            price: 64.99
+        },
+        power: {
+            title: "EVGA BR 450 W",
+            price: 36.99
+        },
+        cooler: {
+            title: "Cooler Master Hyper 212 EVO",
+            price: 33.99
+        },
+        os: {
+            title: "Windows 10 Home",
+            price: 109.99
+        },
+        adapter: {
+            title: "TP-Link TL-WN881ND",
+            price: 18.99
+        },
+        overview:
+            "The Tartane is great for people who need a powerful machine for design, but are on a budget. The Intel i5 processor and 16GB of RAM allow for a smooth creative workflow without the hassle of a slow PC.",
+        people: [
+            "Graphic Designers",
+            "Video Producers",
+            "3D Designers",
+            "Audio Engineers"
+        ]
+    },
+    {
         title: "Submarine",
         img: submarine,
         subtitle: "Powerful Desktop for Design",
@@ -197,8 +251,8 @@ const Builds = [
             price: 109.99
         },
         adapter: {
-            title: "TP-Link TG-3468",
-            price: 14.99
+            title: "TP-Link TL-WN881ND",
+            price: 18.99
         },
         overview:
             "The Clipper is a budget PC choice for playing graphically intensive video games. Using a GTX 1050 Ti graphics card, this machine is able to run high-performance games such as The Witcher 3 and GTA V at around 45 FPS and medium-performance games such as League of Legends at around 130 FPS.",

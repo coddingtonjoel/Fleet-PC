@@ -5,7 +5,12 @@ const BuildContainer = (props) => {
     let adapter = null;
 
     //setting up addition for Wifi Adapters if needed based on motherboard
-    if (props.build.title === "Barque" || props.build.title === "Clipper") {
+    if (
+        props.build.title === "Barque" ||
+        props.build.title === "Clipper" ||
+        props.build.title === "Cruiser" ||
+        props.build.title === "Tartane"
+    ) {
         adapter = (
             <li>
                 <span className="bold">Wifi Adapter: </span>

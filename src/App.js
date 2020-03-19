@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Home from "./components/pages/Home";
 import Build from "./components/pages/Build";
 import Builds from "./Builds";
+import Start from "./components/pages/Start/Start";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                             />
                         );
                     })}
+                    <Route exact path="/start" render={(props) => <Start />} />
                 </Switch>
                 <Footer />
             </div>

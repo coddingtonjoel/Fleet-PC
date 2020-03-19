@@ -1,0 +1,60 @@
+@import "../../../abstracts/placeholders";
+@import "../../../abstracts/variables";
+
+.start {
+    height: 80vh;
+    display: flex;
+    background-image: url("../../../../images/parts3.jpg");
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+
+    & a:link,
+    & a:visited {
+        height: 50vh;
+        flex: 0 0 40%;
+        z-index: 0;
+        text-align: center;
+        padding: 0;
+        background-color: #292929;
+        border-radius: 16px;
+        margin: auto;
+        border: 1px white solid;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    & a:hover {
+        background-color: #4b4b4b;
+    }
+
+    &-btn {
+        height: 100%;
+        width: 100%;
+        @extend %gradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 6rem;
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        line-height: 1.5;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-btn p {
+        height: 100%;
+    }
+}
