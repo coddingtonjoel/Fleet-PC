@@ -5,7 +5,7 @@ const BuildHeader = (props) => {
         <div className="build-header">
             <h1 className="build-header-main">
                 <p>{props.build.title}</p>
-                <p className="build-header-sub">{props.build.subtitle}</p>
+                <p className="build-header-sub">A {props.build.subtitle}</p>
             </h1>
         </div>
     );

@@ -1,17 +1,22 @@
 .build-container {
-    height: 70rem;
-    padding: 0 12%;
+    height: 100%;
+    padding: 0 8%;
     margin-bottom: 7rem;
 
-    &-specs {
-        &-head {
-            font-family: "Chakra Petch", sans-serif;
-            font-weight: 700;
-            text-align: center;
-            color: black;
-            text-transform: uppercase;
-        }
+    &-head {
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        color: black;
+        text-transform: uppercase;
+    }
 
+    &-overview {
+        margin-top: 3rem;
+        margin-bottom: 7rem;
+    }
+
+    &-specs {
         &-body {
             font-family: "Chakra Petch", sans-serif;
             font-weight: 400;
@@ -24,4 +29,8 @@
 
 .bold {
     font-weight: 700;
+}
+
+.disclaimer-text {
+    font-size: 1.1rem;
 }

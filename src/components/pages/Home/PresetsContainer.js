@@ -19,11 +19,6 @@ const PresetsContainer = (props) => {
                                     subtitle={build.subtitle}
                                     key={build.title}
                                 />
-                                <a
-                                    href="#!"
-                                    className="presets-container-btn btn grey darken-4">
-                                    <i className="fas fa-chevron-right"></i>
-                                </a>
                             </Fragment>
                         );
                     })}

@@ -5,11 +5,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 75rem;
+    height: 100%;
     position: relative;
     width: 100%;
     position: relative;
-    padding-top: 15rem;
+    padding-top: 17rem;
+    padding-bottom: 5rem;
 
     &::after {
         content: "";
@@ -69,30 +70,12 @@
         height: 100%;
         margin: 0 3%;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         position: relative;
         background-color: rgb(34, 34, 34);
         padding: 3rem 0;
         border-radius: 12px;
-    }
-
-    &-container-btn {
-        position: absolute;
-        right: 0;
-        height: 40%;
-        width: 8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &-container-btn i {
-        font-size: 3rem;
-        transition: 0.3s;
-    }
-
-    &-container-btn:hover i {
-        transform: translateX(0.4rem);
     }
 }

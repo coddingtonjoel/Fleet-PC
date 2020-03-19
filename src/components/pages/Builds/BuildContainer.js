@@ -1,98 +1,130 @@
 import React from "react";
+import Overview from "./Overview";
 
 const BuildContainer = (props) => {
+    let adapter = null;
+
+    //setting up addition for Wifi Adapters if needed based on motherboard
+    if (props.build.title === "Barque" || props.build.title === "Clipper") {
+        adapter = (
+            <li>
+                <span className="bold">Wifi Adapter: </span>
+                {props.build.adapter.title}
+                <span className="right">${props.build.adapter.price}</span>
+            </li>
+        );
+    }
+
+    //format prices to have correct decimal precision
     const formatCurrency = require("format-currency");
     const opts = { format: "%v", maxFraction: 2 };
 
+    //make a local copy of build object so that user can make changes if necessary
+    const local = JSON.parse(JSON.stringify(props));
+
+    //construction and testing fee
+    const fee = 120;
+
+    //calculate subtotal using the local object's JSON properties
     const subtotal =
-        props.build.cpu.price +
-        props.build.graphics.price +
-        props.build.motherboard.price +
-        props.build.memory.price +
-        props.build.storage.price +
-        props.build.case.price +
-        props.build.power.price +
-        props.build.cooler.price +
-        props.build.os.price;
+        local.build.cpu.price +
+        local.build.graphics.price +
+        local.build.motherboard.price +
+        local.build.memory.price +
+        local.build.storage.price +
+        local.build.case.price +
+        local.build.power.price +
+        local.build.cooler.price +
+        local.build.os.price +
+        local.build.adapter.price;
 
     const tax = subtotal * 0.095;
 
-    const total = props.build.fee + subtotal + tax;
+    const total = fee + subtotal + tax;
 
     return (
         <div className="build-container">
             <div className="container">
-                <h2 className="build-container-specs-head">
-                    Specifications and Prices
-                </h2>
-                <h5 className="center">
-                    You won't have to guess where your money is going.
-                </h5>
+                <div className="build-container-overview">
+                    <h2 className="build-container-head center">Overview</h2>
+                    <Overview build={props.build} />
+                </div>
+                <hr />
+                <br />
+                <div className="build-container-specs">
+                    <h2 className="build-container-head">
+                        Specifications and Prices
+                    </h2>
+                    <h5 className="center">
+                        You won't have to guess where your money is going.
+                    </h5>
+                </div>
                 <div className="build-container-specs-body">
                     <ul>
                         <li>
                             <span className="bold">CPU: </span>
-                            {props.build.cpu.title}
+                            {local.build.cpu.title}
                             <span className="right">
-                                ${props.build.cpu.price}
+                                ${local.build.cpu.price}
                             </span>
                         </li>
                         <li>
                             <span className="bold">Graphics: </span>
-                            {props.build.graphics.title}
+                            {local.build.graphics.title}
                             <span className="right">
-                                ${props.build.graphics.price}
+                                ${local.build.graphics.price}
                             </span>
                         </li>
                         <li>
                             <span className="bold">Motherboard: </span>
-                            {props.build.motherboard.title}
+                            {local.build.motherboard.title}
                             <span className="right">
-                                ${props.build.motherboard.price}
+                                ${local.build.motherboard.price}
                             </span>
                         </li>
                         <li>
                             <span className="bold">Memory: </span>
-                            {props.build.memory.title}
+                            {local.build.memory.title}
                             <span className="right">
-                                ${props.build.memory.price}
+                                ${local.build.memory.price}
                             </span>
                         </li>
                         <li>
                             <span className="bold">Storage: </span>
-                            {props.build.storage.title}
+                            {local.build.storage.title}
                             <span className="right">
-                                ${props.build.storage.price}
+                                ${local.build.storage.price}
                             </span>
                         </li>
                         <li>
                             <span className="bold">Case: </span>
-                            {props.build.case.title}
+                            {local.build.case.title}
                             <span className="right">
-                                ${props.build.case.price}
+                                ${local.build.case.price}
                             </span>
                         </li>
                         <li>
                             <span className="bold">Power Supply: </span>{" "}
-                            {props.build.power.title}
+                            {local.build.power.title}
                             <span className="right">
-                                ${props.build.power.price}
+                                ${local.build.power.price}
                             </span>
                         </li>
                         <li>
                             <span className="bold">CPU Cooler: </span>
-                            {props.build.cooler.title}
+                            {local.build.cooler.title}
                             <span className="right">
-                                ${props.build.cooler.price}
+                                ${local.build.cooler.price}
                             </span>
                         </li>
                         <li>
                             <span className="bold">OS: </span>{" "}
-                            {props.build.os.title}
+                            {local.build.os.title}
                             <span className="right">
-                                ${props.build.os.price}
+                                ${local.build.os.price}
                             </span>
                         </li>
+                        {adapter}
                         <hr />
                         <li>
                             <span className="bold">Subtotal: </span>
@@ -111,18 +143,23 @@ const BuildContainer = (props) => {
                             <span className="bold">
                                 Construction & Testing:{" "}
                             </span>
-                            <span className="right">
-                                ${props.build.fee.toPrecision(5)}
-                            </span>
+                            <span className="right">${fee.toPrecision(5)}</span>
                         </li>
                         <hr />
                         <li className="right">
                             <span className="bold">Total: </span>
                             <span className="bold">
-                                ${formatCurrency(total, opts)}
+                                ${formatCurrency(total, opts)}*
                             </span>
                         </li>
                     </ul>
+                    <br />
+                    <p className="right disclaimer-text">
+                        *Due to the hardware economy constantly fluctuating,
+                        this is a rough estimate of the total. The finalized
+                        total will typically be anywhere within $30 of the
+                        estimated total.
+                    </p>
                 </div>
             </div>
         </div>
