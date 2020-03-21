@@ -1,6 +1,5 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import M from "materialize-css";
-import ModalContent from "./ModalContent";
 
 const Peripheral = (props) => {
     //init materialize-css modal
@@ -8,8 +7,14 @@ const Peripheral = (props) => {
         M.AutoInit();
     }, []);
 
-    const handler = (item) => {
-        props.handler(item);
+    const [other, setOther] = useState(0);
+
+    const handler = () => {
+        props.handler(other);
+    };
+
+    const textHandler = (e) => {
+        setOther(e.target.value);
     };
 
     return (
@@ -21,20 +26,14 @@ const Peripheral = (props) => {
                 <i className="material-icons left">add</i>
                 Add {props.name}
             </button>
-            {/* Modal for Monitor, Keyboard, Headset*/}
-            <div id={props.name} className="peripheral-modal modal">
-                <div className="modal-content">
-                    <h4 className="modal-title">Add {props.name}</h4>
-                    <ModalContent type={props.name} handler={handler} />
-                </div>
-            </div>
             {/* Modal for Other*/}
-            <div id="Other" className="peripheral-modal modal">
+            <div id="Other" className="modal">
                 <div className="modal-content">
                     <h4 className="modal-title">Add Other</h4>
                     <form>
                         <div className="input-field peripheral-other-input">
                             <input
+                                onChange={textHandler}
                                 className="validate"
                                 placeholder="Other Peripheral"
                                 id="first_name"
@@ -45,7 +44,7 @@ const Peripheral = (props) => {
                 </div>
                 <div className="modal-footer">
                     <a
-                        onClick={props.handler}
+                        onClick={handler}
                         href="#!"
                         className="modal-close waves-effect btn-flat">
                         Add

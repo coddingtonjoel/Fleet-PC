@@ -1,65 +1,21 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment } from "react";
 import Overview from "./Overview";
 import Peripheral from "./Peripheral";
 
 const BuildContainer = (props) => {
     //initialize potentially unused parts
     let adapter = null;
-    let monitor = null;
-    let keyboard = null;
-    let mouse = null;
     let other = null;
 
-    const [monitorState, setMonitorState] = useState(0);
-    const [keyboardState, setKeyboardState] = useState(0);
-    const [mouseState, setMouseState] = useState(0);
-    const [otherState, setOtherState] = useState(0);
-
-    useEffect(() => {
-        monitor = (
+    //handlers for "other" modal
+    const handler = (text) => {
+        console.log(text);
+        other = (
             <li>
-                <span className="bold">Monitor: </span>
-                {monitorState.title}}
-                <span className="right">${monitorState.price}</span>
+                <span className="bold">Other: </span>
+                {text}}<span className="right">Price Unknown</span>
             </li>
         );
-    }, [monitorState]);
-
-    //handlers for modal add
-    const handler = (item) => {
-        if (item.type === "monitor") {
-            setMonitorState(item);
-        }
-        if (item.title === "keyboard") {
-            setKeyboardState(keyboard);
-            keyboard = (
-                <li>
-                    <span className="bold">Keyboard: </span>
-                    {keyboardState.title}}
-                    <span className="right">${keyboardState.price}</span>
-                </li>
-            );
-        }
-        if (item.title === "mouse") {
-            setMouseState(mouse);
-            mouse = (
-                <li>
-                    <span className="bold">Mouse: </span>
-                    {mouseState.title}}
-                    <span className="right">${mouseState.price}</span>
-                </li>
-            );
-        }
-        if (item.title === "other") {
-            setOtherState(other);
-            keyboard = (
-                <li>
-                    <span className="bold">Other: </span>
-                    {otherState.title}}
-                    <span className="right">Price Unknown</span>
-                </li>
-            );
-        }
     };
 
     //setting up addition for Wifi Adapters if needed based on motherboard
@@ -100,11 +56,6 @@ const BuildContainer = (props) => {
         local.build.cooler.price +
         local.build.os.price +
         local.build.adapter.price;
-
-    //add peripheral prices if any
-    if (monitorState !== null) subtotal += monitorState.price;
-    if (keyboardState !== null) subtotal += keyboardState.price;
-    if (mouseState !== null) subtotal += mouseState.price;
 
     const tax = subtotal * 0.095;
 
@@ -198,21 +149,9 @@ const BuildContainer = (props) => {
                             {/* Display Adapter line if it exists */}
                             {adapter}
                             <div className="peripheral-container">
-                                <Peripheral
-                                    name={"Monitor"}
-                                    handler={handler}
-                                />
-                                <Peripheral
-                                    name={"Keyboard"}
-                                    handler={handler}
-                                />
-                                <Peripheral name={"Mouse"} handler={handler} />
                                 <Peripheral name={"Other"} handler={handler} />
                             </div>
-                            {/* Display Peripheral lines if they exist */}
-                            {monitor}
-                            {keyboard}
-                            {mouse}
+                            {/* Display Other line if it exists */}
                             {other}
                             <hr />
                             <li>
@@ -242,7 +181,6 @@ const BuildContainer = (props) => {
                                 <span className="bold">
                                     ${formatCurrency(total, opts)}*
                                 </span>
-                                {other}
                             </li>
                         </ul>
                         <br />
