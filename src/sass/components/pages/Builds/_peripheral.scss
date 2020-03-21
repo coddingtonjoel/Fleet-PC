@@ -1,0 +1,20 @@
+.peripheral {
+    display: inline-block;
+    margin: 2em 0;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    width: 20rem;
+    flex: 0 0 20%;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+    }
+
+    &-modal {
+        width: 80vw;
+        background-color: white;
+    }
+}

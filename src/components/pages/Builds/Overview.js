@@ -1,7 +1,6 @@
 import React from "react";
 
 const Overview = (props) => {
-    console.log(props);
     return (
         <div className="overview center">
             <p className="overview-body">{props.build.overview}</p>
