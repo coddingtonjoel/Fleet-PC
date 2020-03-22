@@ -1,19 +1,27 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Overview from "./Overview";
 import Peripheral from "./Peripheral";
+import InfoForm from "./InfoForm";
 
 const BuildContainer = (props) => {
-    //initialize potentially unused parts
+    //initialization and state for potentially unused parts
     let adapter = null;
-    let other = null;
+    const [otherState, setOtherState] = useState(null);
 
     //handlers for "other" modal
     const handler = (text) => {
-        console.log(text);
-        other = (
+        setOtherState(
             <li>
+                <button
+                    onClick={() => {
+                        setOtherState(null);
+                    }}
+                    className="peripheral-close btn-flat">
+                    <i className="material-icons">close</i>
+                </button>
                 <span className="bold">Other: </span>
-                {text}}<span className="right">Price Unknown</span>
+                {text}
+                <span className="right">Price TBD</span>
             </li>
         );
     };
@@ -81,7 +89,10 @@ const BuildContainer = (props) => {
                             You won't have to guess where your money is going.
                         </h5>
                     </div>
-                    <div className="build-container-specs-body">
+                    <form
+                        className="build-container-specs-body"
+                        action="/"
+                        method="post">
                         <ul>
                             <li>
                                 <span className="bold">CPU: </span>
@@ -148,11 +159,11 @@ const BuildContainer = (props) => {
                             </li>
                             {/* Display Adapter line if it exists */}
                             {adapter}
+                            {/* Display Other line if it exists */}
+                            {otherState}
                             <div className="peripheral-container">
                                 <Peripheral name={"Other"} handler={handler} />
                             </div>
-                            {/* Display Other line if it exists */}
-                            {other}
                             <hr />
                             <li>
                                 <span className="bold">Subtotal: </span>
@@ -180,6 +191,7 @@ const BuildContainer = (props) => {
                                 <span className="bold">Total: </span>
                                 <span className="bold">
                                     ${formatCurrency(total, opts)}*
+                                    {otherState === null ? null : " + Other"}
                                 </span>
                             </li>
                         </ul>
@@ -190,7 +202,12 @@ const BuildContainer = (props) => {
                             total will typically be anywhere within $30 of the
                             estimated total.
                         </p>
-                    </div>
+                        <br />
+                        <br />
+                        <hr />
+                        <br />
+                        <InfoForm />
+                    </form>
                 </div>
             </div>
         </Fragment>

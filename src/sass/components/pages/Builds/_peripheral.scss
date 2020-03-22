@@ -12,4 +12,13 @@
         justify-items: center;
         justify-content: space-between;
     }
+
+    &-close {
+        margin-right: 1.5rem;
+    }
+}
+
+.modal-add {
+    width: 10rem;
+    text-align: center;
 }

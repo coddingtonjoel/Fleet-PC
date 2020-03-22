@@ -7,14 +7,14 @@ const Peripheral = (props) => {
         M.AutoInit();
     }, []);
 
-    const [other, setOther] = useState(0);
+    const [text, setText] = useState("");
 
     const handler = () => {
-        props.handler(other);
+        props.handler(text);
     };
 
     const textHandler = (e) => {
-        setOther(e.target.value);
+        setText(e.target.value);
     };
 
     return (
@@ -30,23 +30,23 @@ const Peripheral = (props) => {
             <div id="Other" className="modal">
                 <div className="modal-content">
                     <h4 className="modal-title">Add Other</h4>
-                    <form>
-                        <div className="input-field peripheral-other-input">
-                            <input
-                                onChange={textHandler}
-                                className="validate"
-                                placeholder="Other Peripheral"
-                                id="first_name"
-                                type="text"
-                            />
-                        </div>
-                    </form>
+                    <div className="input-field peripheral-other-input">
+                        <input
+                            value={text}
+                            onChange={textHandler}
+                            className="validate"
+                            placeholder="Other Part (Provide Specific Details)"
+                            id="first_name"
+                            type="text"
+                        />
+                    </div>
                 </div>
                 <div className="modal-footer">
                     <a
                         onClick={handler}
+                        disabled={!text}
                         href="#!"
-                        className="modal-close waves-effect btn-flat">
+                        className="modal-close modal-add waves-effect waves-light btn green white-text">
                         Add
                     </a>
                 </div>
