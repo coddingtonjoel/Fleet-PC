@@ -12,16 +12,13 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
+const cors = require("cors");
+app.use(cors());
+
 const nodemailer = require("nodemailer");
 
-app.post("/api/world", (req, res) => {
-    console.log(req.body);
-    res.send(
-        `I received your POST request. This is what you sent me: ${req.body.post}`
-    );
-});
-
 app.post("/send", (req, res) => {
+    res.send("API Running. . .");
     const output = `
         <h2>New Build Request</h2>
             <p>Name: ${req.body.user.first} ${req.body.user.last}</p>

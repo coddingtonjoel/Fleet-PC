@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 const InfoForm = (props) => {
     const [first, setFirst] = useState("");
@@ -13,10 +12,11 @@ const InfoForm = (props) => {
     //send post request to nodemailer
     const handleSubmit = async (e) => {
         e.preventDefault();
-        fetch("/send", {
+        fetch("https://fleet-pc.herokuapp.com/send", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*"
             },
             body: JSON.stringify({
                 user: {
