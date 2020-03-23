@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const InfoForm = () => {
+const InfoForm = (props) => {
     const [first, setFirst] = useState("");
     const [last, setLast] = useState("");
     const [email, setEmail] = useState("");
@@ -10,33 +10,40 @@ const InfoForm = () => {
     const [state, setState] = useState("");
     const [zipcode, setZipcode] = useState("");
 
-    const submitForm = (e) => {
+    //send post request to nodemailer
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        axios({
+        fetch("/send", {
             method: "POST",
-            url: "http://localhost:3000/send",
-            data: {
-                first: first,
-                last: last,
-                email: email,
-                street: street,
-                city: city,
-                state: state,
-                zipcode: zipcode
-            }
-        }).then((response) => {
-            if (response.data.msg === "success") {
-                alert("Message Sent.");
-                this.resetForm();
-            } else if (response.data.msg === "fail") {
-                alert("Message failed to send.");
-            }
-        });
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                user: {
+                    first: first,
+                    last: last,
+                    email: email,
+                    street: street,
+                    city: city,
+                    state: state,
+                    zipcode: zipcode,
+                    build: props.build,
+                    other: props.other
+                }
+            })
+        })
+            .then((res) => {
+                console.log(res);
+                return res.json();
+            })
+            .then((json) => console.log(json))
+            .catch((a) => {
+                console.log(a);
+            });
     };
 
     return (
-        <div className="infoform">
+        <form className="infoform" onSubmit={handleSubmit}>
             <h2 className="infoform-head center">Required Information</h2>
             <h5 className="infoform-sub center">
                 So we can get in contact with you.
@@ -51,6 +58,7 @@ const InfoForm = () => {
                             id="first_name"
                             type="text"
                             className="validate"
+                            name="first"
                             required
                         />
                         <label htmlFor="first_name">First Name</label>
@@ -63,6 +71,7 @@ const InfoForm = () => {
                             id="last_name"
                             type="text"
                             className="validate"
+                            name="last"
                             required
                         />
                         <label htmlFor="last_name">Last Name</label>
@@ -77,6 +86,7 @@ const InfoForm = () => {
                             id="email"
                             type="email"
                             className="validate"
+                            name="email"
                             required
                         />
                         <label htmlFor="email">Email</label>
@@ -91,6 +101,7 @@ const InfoForm = () => {
                             id="street"
                             type="text"
                             className="validate"
+                            name="street"
                             required
                         />
                         <label htmlFor="street">Street Address</label>
@@ -105,6 +116,7 @@ const InfoForm = () => {
                             id="city"
                             type="text"
                             className="validate"
+                            name="city"
                             required
                         />
                         <label htmlFor="city">City</label>
@@ -117,6 +129,7 @@ const InfoForm = () => {
                             id="state"
                             type="text"
                             className="validate"
+                            name="state"
                             required
                         />
                         <label htmlFor="state">State</label>
@@ -126,24 +139,24 @@ const InfoForm = () => {
                             onChange={(e) => {
                                 setZipcode(e.target.value);
                             }}
-                            id="zip"
+                            id="zipcode"
                             type="text"
                             className="validate"
+                            name="zipcode"
                             required
                         />
-                        <label htmlFor="zip">Zipcode</label>
+                        <label htmlFor="zipcode">Zipcode</label>
                     </div>
                 </div>
             </div>
             <div className="build-container-submit-container">
                 <button
-                    onClick={submitForm}
-                    className="btn waves-effect green build-container-submit right"
+                    className="btn waves-effect waves-light green build-container-submit right"
                     type="submit">
                     Submit Build Request
                 </button>
             </div>
-        </div>
+        </form>
     );
 };
 

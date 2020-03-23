@@ -18,6 +18,8 @@ build/
 
 remote-repo/
 
+.env
+
 coverage/
 
 .module-cache

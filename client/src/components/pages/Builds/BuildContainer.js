@@ -7,9 +7,11 @@ const BuildContainer = (props) => {
     //initialization and state for potentially unused parts
     let adapter = null;
     const [otherState, setOtherState] = useState(null);
+    const [textState, setTextState] = useState("N/A");
 
     //handlers for "other" modal
     const handler = (text) => {
+        setTextState(text);
         setOtherState(
             <li>
                 <button
@@ -89,10 +91,7 @@ const BuildContainer = (props) => {
                             You won't have to guess where your money is going.
                         </h5>
                     </div>
-                    <form
-                        className="build-container-specs-body"
-                        action="/"
-                        method="post">
+                    <div className="build-container-specs-body">
                         <ul>
                             <li>
                                 <span className="bold">CPU: </span>
@@ -206,8 +205,8 @@ const BuildContainer = (props) => {
                         <br />
                         <hr />
                         <br />
-                        <InfoForm />
-                    </form>
+                        <InfoForm build={props.build.title} other={textState} />
+                    </div>
                 </div>
             </div>
         </Fragment>
