@@ -13,6 +13,7 @@ const InfoForm = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         fetch("https://fleet-pc.herokuapp.com/send", {
+            //fetch("http://localhost:5000/send", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +39,7 @@ const InfoForm = (props) => {
             })
             .then((json) => console.log(json))
             .catch((a) => {
-                console.log(a);
+                console.log("Email Send Attempted . . .");
             });
     };
 
