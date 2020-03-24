@@ -44,7 +44,7 @@ app.post("/send", (req, res) => {
 
         // send mail with defined transport object
         let info = await transporter.sendMail({
-            from: process.env.EMAIL, // sender address
+            from: "fleetpc@aol.com", // sender address
             to: "joel.d.coddington@biola.edu", // list of receivers
             subject: "New Build Request", // Subject line
             html: output // html body
