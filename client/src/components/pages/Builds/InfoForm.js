@@ -44,7 +44,7 @@ const InfoForm = (props) => {
     };
 
     return (
-        <form className="infoform" onSubmit={handleSubmit}>
+        <form className="infoform" onSubmit={handleSubmit} netlify>
             <h2 className="infoform-head center">Required Information</h2>
             <h5 className="infoform-sub center">
                 So we can get in contact with you.
