@@ -155,11 +155,12 @@ const InfoForm = (props) => {
                 </div>
             </div>
             <div className="build-container-submit-container">
-                <button
+                <a
+                    href="/submitted"
                     className="btn waves-effect waves-light green build-container-submit right"
                     type="submit">
                     Submit Build Request
-                </button>
+                </a>
             </div>
         </form>
     );

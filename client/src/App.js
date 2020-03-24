@@ -7,6 +7,7 @@ import Home from "./components/pages/Home";
 import Build from "./components/pages/Build";
 import Builds from "./Builds";
 import Start from "./components/pages/Start/Start";
+import Submitted from "./components/pages/Submitted/Submitted";
 
 function App() {
     return (
@@ -26,6 +27,11 @@ function App() {
                         );
                     })}
                     <Route exact path="/start" render={(props) => <Start />} />
+                    <Route
+                        exact
+                        path="/submitted"
+                        render={(props) => <Submitted />}
+                    />
                 </Switch>
                 <Footer />
             </div>

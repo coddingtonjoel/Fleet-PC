@@ -1,8 +1,7 @@
-.build-header {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+.submitted {
     width: 100%;
-    min-height: 40rem;
-    background-image: url("../../../../images/parts4.jpg");
+    height: 80vh;
+    background-image: url("../../../../images/parts3.jpg");
     background-size: cover;
     position: relative;
     background-attachment: fixed;
@@ -23,7 +22,7 @@
 
     &-main {
         position: absolute;
-        top: 45%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -33,7 +32,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 4rem;
-        width: 75%;
+        width: 80%;
         padding: 2% 0;
         z-index: 1;
 
@@ -65,5 +64,13 @@
         font-size: 2rem;
         font-weight: 400;
         margin-top: 0.4rem;
+    }
+    &-btn {
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        width: 20rem;
+        transform: translate(-50%, -50%);
+        font-family: "PT Sans", sans-serif;
     }
 }

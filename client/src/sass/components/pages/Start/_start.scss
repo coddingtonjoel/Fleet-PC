@@ -21,6 +21,7 @@
         border-radius: 16px;
         margin: auto;
         border: 1px white solid;
+        transition: 0.3s;
     }
 
     &::after {
@@ -36,6 +37,7 @@
 
     & a:hover {
         background-color: #4b4b4b;
+        transform: scale(1.02);
     }
 
     &-btn {
