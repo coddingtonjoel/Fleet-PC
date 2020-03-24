@@ -34,11 +34,8 @@ app.post("/send", (req, res) => {
         let transporter = nodemailer.createTransport({
             host: "smtp.aol.com",
             auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASS,
-                clientId: process.env.CLIENTID,
-                clientSecret: process.env.CLIENTSECRET,
-                refreshToken: process.env.REFRESH
+                user: "fleetpc@aol.com",
+                pass: "kpdjjwdtufcserja"
             },
             tls: {
                 rejectUnauthorized: false
