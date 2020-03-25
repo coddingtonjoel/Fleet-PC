@@ -10,6 +10,8 @@ import Start from "./components/pages/Start/Start";
 import Submitted from "./components/pages/Submitted/Submitted";
 import StartBuild from "./components/pages/Start/StartBuild";
 import StartUpgrade from "./components/pages/Start/StartUpgrade";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
 import page404 from "./components/pages/404";
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
             <div className="complete-page">
                 <Navbar />
                 <Switch>
-                    <Route exact path="/" render={(props) => <Home />} />
+                    <Route exact path="/" component={Home} />
                     {Builds.map((build) => {
                         return (
                             <Route
@@ -29,22 +31,13 @@ function App() {
                             />
                         );
                     })}
-                    <Route exact path="/start" render={(props) => <Start />} />
-                    <Route
-                        exact
-                        path="/build"
-                        render={(props) => <StartBuild />}
+                    <Route exact path="/start" component={Start} />
+                    <Route exact path="/build" component={StartBuild} />
+                    <Route exact path="/upgrade" component={StartUpgrade} />
+                    <Route exact path="/submitted" component={Submitted} />
                     />
-                    <Route
-                        exact
-                        path="/upgrade"
-                        render={(props) => <StartUpgrade />}
-                    />
-                    <Route
-                        exact
-                        path="/submitted"
-                        render={(props) => <Submitted />}
-                    />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/contact" component={Contact} />
                     <Route component={page404} />
                 </Switch>
                 <Footer />

@@ -27,12 +27,12 @@ const Footer = () => {
                             <i className="fab fa-github"></i>
                         </a>
                         <a
-                            href="#!"
+                            href="/contact"
                             className="footer-link z-depth-0 btn white-text grey center darken-4 white-text waves-effect waves-light">
                             Contact
                         </a>
                         <a
-                            href="#!"
+                            href="/about"
                             className="footer-link z-depth-0 btn white-text grey center darken-4 white-text waves-effect waves-light">
                             About
                         </a>
