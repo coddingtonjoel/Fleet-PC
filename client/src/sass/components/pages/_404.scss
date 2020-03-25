@@ -1,0 +1,26 @@
+@import "../../abstracts/placeholders";
+
+.page404 {
+    background: #383838;
+    font-family: "Chakra Petch", sans-serif;
+    text-align: center;
+
+    &-head {
+        font-size: 22rem;
+        padding-top: 10rem;
+        letter-spacing: 5rem;
+        font-weight: 700;
+        @extend %gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-color: #212121;
+        -webkit-text-stroke-width: 2px;
+    }
+
+    &-sub {
+        margin-top: -3rem;
+        padding-bottom: 15rem;
+        color: grey;
+    }
+}

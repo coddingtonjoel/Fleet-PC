@@ -13,10 +13,10 @@ const Hook = () => {
                         service.
                     </h5>
                     <div className="hook-btn-container">
-                        <a href="#!" className="hook-btn build">
+                        <a href="/build" className="hook-btn build">
                             <p>Build a PC</p>
                         </a>
-                        <a href="#!" className="hook-btn upgrade">
+                        <a href="/upgrade" className="hook-btn upgrade">
                             <p>Upgrade a PC</p>
                         </a>
                     </div>

@@ -19,7 +19,13 @@ const nodemailer = require("nodemailer");
 
 app.post("/send", (req, res) => {
     res.send("API Running. . .");
-    const output = `
+
+    //format email output based on the type of request
+    let output;
+
+    //regular build
+    if (req.body.user.type === "build") {
+        output = `
         <h2>New Build Request</h2>
             <p>Name: ${req.body.user.first} ${req.body.user.last}</p>
             <p>Email: ${req.body.user.email}</p>
@@ -27,6 +33,25 @@ app.post("/send", (req, res) => {
             ${req.body.user.city}, ${req.body.user.state} ${req.body.user.zipcode}</p>
             <p>Build: ${req.body.user.build}</p>
             <p>Other: ${req.body.user.other}</p>`;
+        //custom build
+    } else if (req.body.user.type === "build-c") {
+        output = `
+        <h2>New Custom Build Request</h2>
+        <p>Name: ${req.body.user.first} ${req.body.user.last}</p>
+        <p>Email: ${req.body.user.email}</p>
+        <p>Address: <br/>${req.body.user.street}<br/>
+        ${req.body.user.city}, ${req.body.user.state} ${req.body.user.zipcode}</p>
+        <p>Build Request Instructions:<br/>${req.body.user.text}`;
+        //upgrade
+    } else if (req.body.user.type === "upgrade") {
+        output = `
+        <h2>Upgrade Request</h2>
+        <p>Name: ${req.body.user.first} ${req.body.user.last}</p>
+        <p>Email: ${req.body.user.email}</p>
+        <p>Address: <br/>${req.body.user.street}<br/>
+        ${req.body.user.city}, ${req.body.user.state} ${req.body.user.zipcode}</p>
+        <p>Part to Upgrade: ${req.body.user.select}</p>`;
+    }
 
     // async..await is not allowed in global scope, must use a wrapper
     async function mailer() {
@@ -46,10 +71,9 @@ app.post("/send", (req, res) => {
         let info = await transporter.sendMail({
             from: "fleetpc@aol.com", // sender address
             to: "joel.d.coddington@biola.edu", // list of receivers
-            subject: "New Build Request", // Subject line
+            subject: "NEW BUILD/UPGRADE REQUEST", // Subject line
             html: output // html body
         });
-
         console.log("Message sent: %s", info.messageId);
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 

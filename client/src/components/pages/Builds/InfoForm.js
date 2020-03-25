@@ -8,10 +8,26 @@ const InfoForm = (props) => {
     const [city, setCity] = useState("");
     const [state, setState] = useState("");
     const [zipcode, setZipcode] = useState("");
+    const [submit, setSubmit] = useState("Submit Build Request");
 
     //send post request to nodemailer
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setSubmit(
+            <div class="btn-spinner preloader-wrapper small active">
+                <div class="spinner-layer spinner-red-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        );
         fetch("https://fleet-pc.herokuapp.com/send", {
             //fetch("http://localhost:5000/send", {
             method: "POST",
@@ -21,6 +37,7 @@ const InfoForm = (props) => {
             },
             body: JSON.stringify({
                 user: {
+                    type: "build",
                     first: first,
                     last: last,
                     email: email,
@@ -40,6 +57,7 @@ const InfoForm = (props) => {
             .then((json) => console.log(json))
             .catch((a) => {
                 console.log("Email Send Attempted . . .");
+                window.location.href = "/submitted";
             });
     };
 
@@ -48,7 +66,7 @@ const InfoForm = (props) => {
             className="infoform"
             name="build-request"
             onSubmit={handleSubmit}
-            data-netlify="true">
+            action="/submitted">
             <h2 className="infoform-head center">Required Information</h2>
             <h5 className="infoform-sub center">
                 So we can get in contact with you.
@@ -62,7 +80,7 @@ const InfoForm = (props) => {
                             }}
                             id="first_name"
                             type="text"
-                            className="validate"
+                            className="validate infoform-input"
                             name="first"
                             required
                         />
@@ -75,7 +93,7 @@ const InfoForm = (props) => {
                             }}
                             id="last_name"
                             type="text"
-                            className="validate"
+                            className="validate infoform-input"
                             name="last"
                             required
                         />
@@ -90,7 +108,7 @@ const InfoForm = (props) => {
                             }}
                             id="email"
                             type="email"
-                            className="validate"
+                            className="validate infoform-input"
                             name="email"
                             required
                         />
@@ -105,7 +123,7 @@ const InfoForm = (props) => {
                             }}
                             id="street"
                             type="text"
-                            className="validate"
+                            className="validate infoform-input"
                             name="street"
                             required
                         />
@@ -120,7 +138,7 @@ const InfoForm = (props) => {
                             }}
                             id="city"
                             type="text"
-                            className="validate"
+                            className="validate infoform-input"
                             name="city"
                             required
                         />
@@ -133,7 +151,7 @@ const InfoForm = (props) => {
                             }}
                             id="state"
                             type="text"
-                            className="validate"
+                            className="validate infoform-input"
                             name="state"
                             required
                         />
@@ -146,7 +164,7 @@ const InfoForm = (props) => {
                             }}
                             id="zipcode"
                             type="text"
-                            className="validate"
+                            className="validate infoform-input"
                             name="zipcode"
                             required
                         />
@@ -155,12 +173,11 @@ const InfoForm = (props) => {
                 </div>
             </div>
             <div className="build-container-submit-container">
-                <a
-                    href="/submitted"
-                    className="btn waves-effect waves-light green build-container-submit right"
+                <button
+                    className="btn waves-effect waves-light grey darken-4 build-container-submit right"
                     type="submit">
-                    Submit Build Request
-                </a>
+                    {submit}
+                </button>
             </div>
         </form>
     );

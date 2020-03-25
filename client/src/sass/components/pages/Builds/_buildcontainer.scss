@@ -30,9 +30,11 @@
         font-family: "Chakra Petch", sans-serif;
         letter-spacing: 0.1rem;
         width: 40rem;
+        height: 5rem;
+        border-radius: 8px;
 
         &-container {
-            margin-top: 5rem;
+            margin: 5rem 0;
             display: flex;
             justify-content: center;
             align-items: center;

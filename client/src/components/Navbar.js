@@ -25,14 +25,28 @@ const Navbar = () => {
                         <li>
                             <a
                                 className="btn-flat waves-effect waves-light white-text navtext"
-                                href="#!">
+                                href="/build">
+                                Build
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                className="btn-flat waves-effect waves-light white-text navtext"
+                                href="/upgrade">
+                                Upgrade
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                className="btn-flat waves-effect waves-light white-text navtext"
+                                href="/contact">
                                 Contact
                             </a>
                         </li>
                         <li>
                             <a
                                 className="btn-flat waves-effect waves-light white-text navtext"
-                                href="#!">
+                                href="/about">
                                 About
                             </a>
                         </li>
@@ -44,14 +58,28 @@ const Navbar = () => {
                 <li>
                     <a
                         className="sidenav-text grey darken-4 white-text waves-light waves-effect"
-                        href="#!">
+                        href="/build">
+                        Build
+                    </a>
+                </li>
+                <li>
+                    <a
+                        className="sidenav-text grey darken-4 white-text waves-light waves-effect"
+                        href="/upgrade">
+                        Upgrade
+                    </a>
+                </li>
+                <li>
+                    <a
+                        className="sidenav-text grey darken-4 white-text waves-light waves-effect"
+                        href="/contact">
                         Contact
                     </a>
                 </li>
                 <li>
                     <a
                         className="sidenav-text grey darken-4 white-text waves-light waves-effect"
-                        href="#!">
+                        href="/about">
                         About
                     </a>
                 </li>

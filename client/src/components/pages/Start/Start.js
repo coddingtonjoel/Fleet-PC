@@ -3,13 +3,17 @@ import React from "react";
 const Start = () => {
     return (
         <div className="start">
-            <a href="#!" className="btn z-depth-3 waves-effect waves-light">
-                <div className="start-btn">
+            <a
+                href="/build"
+                className="start-link btn z-depth-3 waves-effect waves-light">
+                <div className="start-btn waves-effect">
                     <p className="valign-wrapper">Build a PC</p>
                 </div>
             </a>
-            <a href="#!" className="btn z-depth-3 waves-effect waves-light">
-                <div className="start-btn">
+            <a
+                href="/upgrade"
+                className="start-link btn z-depth-3 waves-effect waves-light">
+                <div className="start-btn waves-effect">
                     <p className="valign-wrapper">Upgrade a PC</p>
                 </div>
             </a>

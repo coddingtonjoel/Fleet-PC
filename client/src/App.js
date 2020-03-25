@@ -8,6 +8,9 @@ import Build from "./components/pages/Build";
 import Builds from "./Builds";
 import Start from "./components/pages/Start/Start";
 import Submitted from "./components/pages/Submitted/Submitted";
+import StartBuild from "./components/pages/Start/StartBuild";
+import StartUpgrade from "./components/pages/Start/StartUpgrade";
+import page404 from "./components/pages/404";
 
 function App() {
     return (
@@ -29,9 +32,20 @@ function App() {
                     <Route exact path="/start" render={(props) => <Start />} />
                     <Route
                         exact
+                        path="/build"
+                        render={(props) => <StartBuild />}
+                    />
+                    <Route
+                        exact
+                        path="/upgrade"
+                        render={(props) => <StartUpgrade />}
+                    />
+                    <Route
+                        exact
                         path="/submitted"
                         render={(props) => <Submitted />}
                     />
+                    <Route component={page404} />
                 </Switch>
                 <Footer />
             </div>

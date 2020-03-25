@@ -39,3 +39,15 @@ html {
         font-size: 50%; //50% of 16 is 8px
     }
 }
+
+//CHANGE MATERIALIZE INPUT COLORS
+
+/* label focus color */
+.input-field input:focus + label {
+    color: black !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+    border-bottom: 1px solid black !important;
+    box-shadow: 0 1px 0 0 black !important;
+}
