@@ -70,7 +70,7 @@ app.post("/send", (req, res) => {
         // send mail with defined transport object
         let info = await transporter.sendMail({
             from: "fleetpc@aol.com", // sender address
-            to: "joel.d.coddington@biola.edu", // list of receivers
+            to: "admin@fleetpc.org", // list of receivers
             subject: "NEW BUILD/UPGRADE REQUEST", // Subject line
             html: output // html body
         });
