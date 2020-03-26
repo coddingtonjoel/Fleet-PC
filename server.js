@@ -71,7 +71,7 @@ app.post("/send", (req, res) => {
         let info = await transporter.sendMail({
             from: "fleetpc@aol.com", // sender address
             to: "admin@fleetpc.org", // list of receivers
-            subject: "NEW BUILD/UPGRADE REQUEST", // Subject line
+            subject: `New Request from ${req.body.user.first} ${req.body.user.last}`, // Subject line
             html: output // html body
         });
         console.log("Message sent: %s", info.messageId);
