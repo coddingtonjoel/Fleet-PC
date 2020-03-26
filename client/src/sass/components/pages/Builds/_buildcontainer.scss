@@ -46,6 +46,9 @@
     font-weight: 700;
 }
 
-.disclaimer-text {
-    font-size: 1.1rem;
+.disclaimer {
+    &-text {
+        font-size: 1.1rem;
+        text-align: right;
+    }
 }

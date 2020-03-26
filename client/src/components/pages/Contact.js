@@ -5,12 +5,15 @@ const Contact = () => {
         <div className="contact">
             <h2 className="contact-head">Contact Us</h2>
             <div className="contact-container">
-                <p className="contact-body">
+                <p className="contact-body center">
                     For business inquiries, feel free to email us at
                     <span className="bold contact-body-email">
                         {" "}
-                        fleetpc@aol.com
+                        admin@fleetpc.org
                     </span>
+                    <br />
+                    <br />
+                    Don't hesitate to leave us any suggestions either!
                 </p>
             </div>
             <div> &nbsp;</div>

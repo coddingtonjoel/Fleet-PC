@@ -13,11 +13,11 @@ const Builds = [
         img: cruiser,
         subtitle: "Budget Everyday Desktop",
         cpu: {
-            title: "AMD Athlon 200GE",
-            price: 70.99
+            title: "AMD Ryzen 3 3200G",
+            price: 99.99
         },
         graphics: {
-            title: "Radeon Vega 3 (Built-in with CPU)",
+            title: "Radeon Vega 8 (Built-in with CPU)",
             price: 0
         },
         motherboard: {
@@ -26,11 +26,11 @@ const Builds = [
         },
         memory: {
             title: "8GB DDR4 RAM",
-            price: 34.99
+            price: 38.99
         },
         storage: {
             title: "120GB SSD",
-            price: 27.99
+            price: 28.99
         },
         case: {
             title: "Corsair Carbide Series 88R",
@@ -38,7 +38,7 @@ const Builds = [
         },
         power: {
             title: "EVGA BR 450 W",
-            price: 36.99
+            price: 51.99
         },
         cooler: {
             title: "AMD Athlon 200GE Stock Fan (Comes with CPU)",
@@ -50,7 +50,7 @@ const Builds = [
         },
         adapter: {
             title: "TP-Link TL-WN881ND",
-            price: 18.99
+            price: 17.99
         },
         overview:
             "The Cruiser may be a budget everyday PC, but it still gets the job done. The Intel i3 CPU, 8GB of RAM, and solid state drive will make your PC fast and efficient while performing everyday tasks.",
@@ -62,35 +62,35 @@ const Builds = [
         subtitle: "Robust Everyday Desktop",
         cpu: {
             title: "Intel Core i5-7400",
-            price: 182.99
+            price: 199.99
         },
         graphics: {
             title: "Intel HD Graphics 630 (Built-in with CPU)",
             price: 0
         },
         motherboard: {
-            title: "Gigabyte GA-H110-D3A",
-            price: 59.99
+            title: "ASRock Z170A- X1",
+            price: 69.99
         },
         memory: {
             title: "8GB DDR4 RAM",
-            price: 34.99
+            price: 38.99
         },
         storage: {
             title: "240GB SSD",
             price: 39.99
         },
         case: {
-            title: "Deepcool MATREXX 50",
-            price: 45.99
+            title: "Metallic Gear Neo Silent",
+            price: 49.99
         },
         power: {
-            title: "EVGA BR 500 W",
-            price: 40.99
+            title: "EVGA BR 450 W",
+            price: 51.99
         },
         cooler: {
             title: "Cooler Master Hyper 212 EVO",
-            price: 33.99
+            price: 39.99
         },
         os: {
             title: "Windows 10 Home",
@@ -98,7 +98,7 @@ const Builds = [
         },
         adapter: {
             title: "TP-Link TL-WN881ND",
-            price: 18.99
+            price: 17.99
         },
         overview:
             "The Barque is a true everyday PC. Whether used as a student computer or as a business workstation, the Intel i5 CPU, 8GB of RAM, and solid state drive will make your PC fast, efficient, and powerful while performing everyday tasks.",
@@ -110,19 +110,19 @@ const Builds = [
         subtitle: "Budget Desktop for Design",
         cpu: {
             title: "Intel Core i5-9600K",
-            price: 219.99
+            price: 224.99
         },
         graphics: {
             title: "GeForce GTX 1060 3GB",
-            price: 133.99
+            price: 159.99
         },
         motherboard: {
             title: "MSI H310-A PRO",
-            price: 69.99
+            price: 58.99
         },
         memory: {
             title: "16GB DDR4 RAM",
-            price: 69.99
+            price: 73.99
         },
         storage: {
             title: "240GB SSD",
@@ -134,11 +134,11 @@ const Builds = [
         },
         power: {
             title: "EVGA BR 450 W",
-            price: 36.99
+            price: 51.99
         },
         cooler: {
             title: "Cooler Master Hyper 212 EVO",
-            price: 33.99
+            price: 39.99
         },
         os: {
             title: "Windows 10 Home",
@@ -146,7 +146,7 @@ const Builds = [
         },
         adapter: {
             title: "TP-Link TL-WN881ND",
-            price: 18.99
+            price: 17.99
         },
         overview:
             "The Tartane is great for people who need a powerful machine for design, but are on a budget. The Intel i5 processor and 16GB of RAM allow for a smooth creative workflow without the hassle of a slow PC.",
@@ -163,23 +163,23 @@ const Builds = [
         subtitle: "Powerful Desktop for Design",
         cpu: {
             title: "Intel Core i9-9900K",
-            price: 504.99
+            price: 529.99
         },
         graphics: {
-            title: "GeForce GTX 1660 6GB",
-            price: 203.99
+            title: "GeForce GTX 1660 SUPER 6GB",
+            price: 229.99
         },
         motherboard: {
-            title: "Gigabyte B360 AORUS 3",
-            price: 119.99
+            title: "Gigabyte Z390 AORUS PRO",
+            price: 199.99
         },
         memory: {
             title: "32GB DDR4 RAM",
-            price: 125.99
+            price: 126.99
         },
         storage: {
             title: "500GB SSD",
-            price: 79.99
+            price: 94.99
         },
         case: {
             title: "Corsair 275R Airflow",
@@ -187,11 +187,11 @@ const Builds = [
         },
         power: {
             title: "EVGA BR 500 W",
-            price: 40.99
+            price: 53.99
         },
         cooler: {
             title: "Cooler Master Hyper 212 EVO",
-            price: 33.99
+            price: 39.99
         },
         os: {
             title: "Windows 10 Home",
@@ -216,35 +216,35 @@ const Builds = [
         subtitle: "Budget Gaming Desktop",
         cpu: {
             title: "Intel Core i3-9100F",
-            price: 78.99
+            price: 82.99
         },
         graphics: {
-            title: "GeForce GTX 1050 Ti",
-            price: 150.99
+            title: "GeForce GTX 1060 3GB",
+            price: 159.99
         },
         motherboard: {
             title: "MSI B360",
-            price: 97.99
+            price: 99.99
         },
         memory: {
             title: "8GB DDR4 RAM",
-            price: 34.99
+            price: 38.99
         },
         storage: {
             title: "240GB SSD",
-            price: 38.99
+            price: 39.99
         },
         case: {
             title: "Phanteks Eclipse P300A",
-            price: 49.99
+            price: 59.99
         },
         power: {
             title: "EVGA BR 500 W",
-            price: 49.99
+            price: 53.99
         },
         cooler: {
             title: "Cooler Master Hyper 212 EVO",
-            price: 33.99
+            price: 39.99
         },
         os: {
             title: "Windows 10 Home",
@@ -252,7 +252,7 @@ const Builds = [
         },
         adapter: {
             title: "TP-Link TL-WN881ND",
-            price: 18.99
+            price: 17.99
         },
         overview:
             "The Clipper is a budget PC choice for playing graphically intensive video games. Using a GTX 1050 Ti graphics card, this machine is able to run high-performance games such as The Witcher 3 and GTA V at around 45 FPS and medium-performance games such as League of Legends at around 130 FPS.",
@@ -264,35 +264,35 @@ const Builds = [
         subtitle: "Mid-Tier Gaming Desktop",
         cpu: {
             title: "Intel Core i5-9400F",
-            price: 149.99
+            price: 159.99
         },
         graphics: {
-            title: "GeForce GTX 1660 6GB",
-            price: 203.99
+            title: "GeForce GTX 1660 SUPER 6GB",
+            price: 229.99
         },
         motherboard: {
             title: "Gigabyte Z390 AORUS PRO",
-            price: 186.99
+            price: 199.99
         },
         memory: {
             title: "16GB DDR4 RAM",
-            price: 69.99
+            price: 83.99
         },
         storage: {
             title: "500GB SSD",
-            price: 79.99
+            price: 94.99
         },
         case: {
             title: "Phanteks P300",
-            price: 49.99
+            price: 59.99
         },
         power: {
             title: "EVGA BR 500 W",
-            price: 40.99
+            price: 53.99
         },
         cooler: {
             title: "Cooler Master Hyper 212 EVO",
-            price: 33.99
+            price: 39.99
         },
         os: {
             title: "Windows 10 Home",
@@ -312,35 +312,35 @@ const Builds = [
         subtitle: "Mid to High-Tier Gaming Desktop",
         cpu: {
             title: "Intel Core i5-9600K",
-            price: 219.99
+            price: 224.99
         },
         graphics: {
             title: "GeForce RTX 2070",
-            price: 389.99
+            price: 399.99
         },
         motherboard: {
             title: "Gigabyte Z390 AORUS PRO",
-            price: 186.99
+            price: 199.99
         },
         memory: {
             title: "16GB DDR4 RAM",
-            price: 69.99
+            price: 83.99
         },
         storage: {
             title: "500GB SSD",
-            price: 79.99
+            price: 94.99
         },
         case: {
             title: "Corsair Carbide 175R",
-            price: 69.99
+            price: 59.99
         },
         power: {
             title: "Corsair CXM 550 W",
-            price: 74.99
+            price: 79.99
         },
         cooler: {
             title: "Cooler Master Hyper 212 EVO",
-            price: 33.99
+            price: 39.99
         },
         os: {
             title: "Windows 10 Home",
@@ -360,35 +360,35 @@ const Builds = [
         subtitle: "High-Tier Gaming Desktop",
         cpu: {
             title: "Intel Core i7-9700K",
-            price: 369.99
+            price: 384.99
         },
         graphics: {
             title: "GeForce RTX 2080",
-            price: 674.99
+            price: 699.99
         },
         motherboard: {
             title: "Gigabyte Z390 AORUS PRO",
-            price: 186.99
+            price: 199.99
         },
         memory: {
             title: "16GB DDR4 RAM",
-            price: 69.99
+            price: 83.99
         },
         storage: {
             title: "500GB SSD",
-            price: 79.99
+            price: 94.99
         },
         case: {
             title: "Corsair 200R",
-            price: 70.99
+            price: 74.99
         },
         power: {
             title: "Corsair CXM 550",
-            price: 74.99
+            price: 79.99
         },
         cooler: {
             title: "Cooler Master Hyper 212 EVO",
-            price: 33.99
+            price: 39.99
         },
         os: {
             title: "Windows 10 Home",

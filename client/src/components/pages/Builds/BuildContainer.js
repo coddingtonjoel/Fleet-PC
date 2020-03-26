@@ -94,6 +94,11 @@ const BuildContainer = (props) => {
                     <div className="build-container-specs-body">
                         <ul>
                             <li>
+                                <span className="bold">PART</span>
+                                <span className="bold right">MSRP*</span>
+                            </li>
+                            <hr />
+                            <li>
                                 <span className="bold">CPU: </span>
                                 {local.build.cpu.title}
                                 <span className="right">
@@ -189,17 +194,20 @@ const BuildContainer = (props) => {
                             <li className="right">
                                 <span className="bold">Total: </span>
                                 <span className="bold">
-                                    ${formatCurrency(total, opts)}*
+                                    ${formatCurrency(total, opts)}**
                                     {otherState === null ? null : " + Other"}
                                 </span>
                             </li>
                         </ul>
                         <br />
                         <p className="right disclaimer-text">
-                            *Due to the hardware economy constantly fluctuating,
-                            this is a rough estimate of the total. The finalized
-                            total will typically be anywhere within $30 of the
-                            estimated total.
+                            *MSRP is the manufacturer's suggested retail price,
+                            rather than list price. as.
+                            <br />
+                            **Due to the hardware economy constantly
+                            fluctuating, this is a rough estimate of the total.
+                            The finalized total will typically be anywhere
+                            within $30 of the estimated total.
                         </p>
                         <br />
                         <br />

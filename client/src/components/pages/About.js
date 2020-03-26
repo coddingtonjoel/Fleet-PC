@@ -8,7 +8,7 @@ const About = () => {
                 <p className="about-body">
                     Hi! My name is Joel Coddington and I've always been
                     fascinated by computers. I am a computer science student at
-                    Biola University in La Mirada, CA. I built my first computer
+                    Biola University in La Mirada, CA; I built my first computer
                     in 2017, and have build many for friends and family since
                     then. I wanted to keep up building, but I didn't have anyone
                     to build for! That's why I decided to start a small business
@@ -18,13 +18,14 @@ const About = () => {
                     My biggest problem with big companies that sell PCs is that
                     you never know where you money is going. You are never sure
                     how much of your money is <em>actually</em> going to the
-                    parts rather than to the manufacturer. With the display of
-                    prices on my custom presets, I want my customers to be fully
-                    aware of exactly how their money is divided. Some
-                    manufacturers could take hundreds of dollars in profit and
-                    you won't even know it. I think being honest is the best way
-                    to fulfill needs of customers and to properly give back to
-                    the community.
+                    parts rather than to the manufacturer. Fleet PC uses Newegg
+                    Business for consistent retail prices and suppliers. With
+                    the display of prices on my custom presets, I want my
+                    customers to be fully aware of exactly how their money is
+                    divided. Some manufacturers could take hundreds of dollars
+                    in profit and you won't even know it. I think being honest
+                    is the best way to fulfill needs of customers and to
+                    properly give back to the community.
                     <br />
                     <br />I also love web development! I build this website
                     using React, Sass, Materialize-CSS, and Node.js. You can
