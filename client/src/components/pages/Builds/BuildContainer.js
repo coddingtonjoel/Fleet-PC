@@ -69,7 +69,10 @@ const BuildContainer = (props) => {
 
     const tax = subtotal * 0.095;
 
-    const total = fee + subtotal + tax;
+    //square invoice fee
+    const square = (subtotal + tax + fee) * 0.029 + 0.3;
+
+    const total = fee + subtotal + tax + square;
 
     return (
         <Fragment>
@@ -181,13 +184,20 @@ const BuildContainer = (props) => {
                                     ${formatCurrency(tax, opts)}
                                 </span>
                             </li>
-                            <hr />
                             <li>
                                 <span className="bold">
                                     Construction & Testing:{" "}
                                 </span>
                                 <span className="right">
                                     ${fee.toPrecision(5)}
+                                </span>
+                            </li>
+                            <li>
+                                <span className="bold">
+                                    Square Processing Fee:{" "}
+                                </span>
+                                <span className="right">
+                                    ${formatCurrency(square, opts)}
                                 </span>
                             </li>
                             <hr />
