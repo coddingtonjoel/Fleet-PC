@@ -2,7 +2,7 @@ import React from "react";
 
 const Hook = () => {
     return (
-        <body className="hook">
+        <div className="hook">
             <div className="hook-container">
                 <div className="hook-inner-container container">
                     <h2 className="hook-head">Don't get overcharged.</h2>
@@ -22,7 +22,7 @@ const Hook = () => {
                     </div>
                 </div>
             </div>
-        </body>
+        </div>
     );
 };
 

@@ -12,6 +12,10 @@
     &-container {
         padding: 0 20%;
 
+        @media (max-width: 600px) {
+            padding: 0 8%;
+        }
+
         & .row {
             margin: 0;
         }
@@ -19,6 +23,14 @@
 
     &-input {
         margin-top: 2rem !important;
+
+        @media (max-width: 450px) {
+            margin-top: 3rem !important;
+        }
+
+        @media (max-width: 384px) {
+            margin-top: 4rem !important;
+        }
     }
 }
 

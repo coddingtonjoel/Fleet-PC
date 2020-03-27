@@ -131,7 +131,7 @@ const InfoForm = (props) => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="input-field col s6">
+                    <div className="input-field col m6 s12">
                         <input
                             onChange={(e) => {
                                 setCity(e.target.value);
@@ -144,7 +144,7 @@ const InfoForm = (props) => {
                         />
                         <label htmlFor="city">City</label>
                     </div>
-                    <div className="input-field col s2">
+                    <div className="input-field col m2 s4">
                         <input
                             onChange={(e) => {
                                 setState(e.target.value);
@@ -157,7 +157,7 @@ const InfoForm = (props) => {
                         />
                         <label htmlFor="state">State</label>
                     </div>
-                    <div className="input-field col s4">
+                    <div className="input-field col m4 s8">
                         <input
                             onChange={(e) => {
                                 setZipcode(e.target.value);

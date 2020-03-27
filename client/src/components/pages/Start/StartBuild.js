@@ -90,8 +90,8 @@ const StartBuild = () => {
                             className="col s12"
                             onSubmit={handleSubmit}
                             action="/submitted">
-                            <div className="row">
-                                <div className="input-field build-textarea input-field-white col s12">
+                            <div className="build-textarea-container">
+                                <div className="input-field build-textarea input-field-white">
                                     <textarea
                                         id="build-area"
                                         className="materialize-textarea"
@@ -105,6 +105,7 @@ const StartBuild = () => {
                                     </label>
                                 </div>
                             </div>
+
                             <div className="infoform">
                                 <h2 className="infoform-head grey-text text-lighten-3 center">
                                     Required Information
@@ -221,9 +222,9 @@ const StartBuild = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="build-container-submit-container">
+                                <div className="start-build-submit-container">
                                     <button
-                                        className="btn waves-effect waves-light grey darken-3 build-container-submit right"
+                                        className="btn waves-effect waves-light grey darken-3 start-build-submit"
                                         type="submit">
                                         {submit}
                                     </button>

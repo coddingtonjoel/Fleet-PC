@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./sass/main.scss";
 import Navbar from "./components/Navbar";
@@ -17,7 +17,7 @@ import page404 from "./components/pages/404";
 function App() {
     return (
         <Router>
-            <div className="complete-page">
+            <Fragment>
                 <Navbar />
                 <Switch>
                     <Route exact path="/" component={Home} />
@@ -41,7 +41,7 @@ function App() {
                     <Route component={page404} />
                 </Switch>
                 <Footer />
-            </div>
+            </Fragment>
         </Router>
     );
 }

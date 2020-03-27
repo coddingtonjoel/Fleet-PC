@@ -12,7 +12,7 @@ const Start = () => {
             </a>
             <a
                 href="/upgrade"
-                className="start-link btn z-depth-3 waves-effect waves-light">
+                className="start-link start-link-upgrade btn z-depth-3 waves-effect waves-light">
                 <div className="start-btn waves-effect">
                     <p className="valign-wrapper">Upgrade a PC</p>
                 </div>

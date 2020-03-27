@@ -200,15 +200,16 @@ const BuildContainer = (props) => {
                             </li>
                         </ul>
                         <br />
-                        <p className="right disclaimer-text">
+                        <p className="right disclaimer">
                             *MSRP is the manufacturer's suggested retail price,
-                            rather than list price. as.
+                            rather than list price.
                             <br />
                             **Due to the hardware economy constantly
                             fluctuating, this is a rough estimate of the total.
                             The finalized total will typically be anywhere
                             within $30 of the estimated total.
                         </p>
+                        <br />
                         <br />
                         <br />
                         <hr />

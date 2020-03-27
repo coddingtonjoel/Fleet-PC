@@ -21,6 +21,10 @@
         border-radius: 12px;
         margin-bottom: 10rem;
 
+        @media (max-width: 355px) {
+            margin-bottom: 15rem;
+        }
+
         &-bottom {
             margin-bottom: 3rem !important;
         }
@@ -29,9 +33,9 @@
     &-submit {
         font-family: "Chakra Petch", sans-serif;
         letter-spacing: 0.1rem;
-        width: 40rem;
         height: 5rem;
         border-radius: 8px;
+        margin-bottom: 4rem;
 
         &-container {
             margin-top: 5rem;
@@ -81,4 +85,10 @@
 
 .build-textarea {
     padding-top: 2rem !important;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

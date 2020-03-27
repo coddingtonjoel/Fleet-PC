@@ -41,7 +41,7 @@ const Builds = [
             price: 51.99
         },
         cooler: {
-            title: "AMD Athlon 200GE Stock Fan (Comes with CPU)",
+            title: "AMD Ryzen 3 Stock Fan",
             price: 0
         },
         os: {

@@ -37,6 +37,15 @@
         padding: 2% 0;
         z-index: 1;
 
+        @media (max-width: 720px) {
+            width: 100%;
+            padding: 4% 0;
+        }
+
+        @media (max-width: 350px) {
+            font-size: 3.5rem;
+        }
+
         &::after {
             content: "";
             display: block;
@@ -58,6 +67,10 @@
                 #d53369
             ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+
+            @media (max-width: 720px) {
+                clip-path: none;
+            }
         }
     }
 
@@ -65,5 +78,9 @@
         font-size: 2rem;
         font-weight: 400;
         margin-top: 0.4rem;
+
+        @media (max-width: 350px) {
+            font-size: 1.4rem;
+        }
     }
 }

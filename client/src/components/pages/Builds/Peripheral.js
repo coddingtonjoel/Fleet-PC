@@ -35,7 +35,7 @@ const Peripheral = (props) => {
                             value={text}
                             onChange={textHandler}
                             className="validate"
-                            placeholder="Other Part (Provide Specific Details)"
+                            placeholder="Other Part (Provide Details)"
                             id="first_name"
                             type="text"
                         />

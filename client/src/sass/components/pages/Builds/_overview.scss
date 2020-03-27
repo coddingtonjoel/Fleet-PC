@@ -9,6 +9,21 @@
         font-weight: 700;
         display: flex;
         align-items: center;
+        justify-content: center;
+
+        @media (max-width: 680px) {
+            flex-wrap: wrap;
+        }
+
+        &-img {
+            @media (max-width: 992px) {
+                height: 30rem;
+            }
+
+            @media (max-width: 680px) {
+                margin-bottom: 7rem;
+            }
+        }
 
         &-list {
             padding-top: 1.5rem;

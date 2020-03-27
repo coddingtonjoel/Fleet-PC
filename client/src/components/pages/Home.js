@@ -1,15 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Header from "./Home/Header";
 import Hook from "./Home/Hook";
 import PresetsContainer from "./Home/PresetsContainer";
 
 const Home = (props) => {
     return (
-        <div>
+        <Fragment>
             <Header />
             <Hook />
             <PresetsContainer />
-        </div>
+        </Fragment>
     );
 };
 

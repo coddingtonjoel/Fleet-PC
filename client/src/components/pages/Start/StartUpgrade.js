@@ -71,6 +71,10 @@ const StartUpgrade = () => {
                             <h3 className="start-upgrade-head">
                                 What part are you looking to upgrade?
                             </h3>
+                            <p className="center start-upgrade-sub grey-text">
+                                (Submit multiple requests if you are looking to
+                                upgrade multiple parts)
+                            </p>
                             <form
                                 className="col s12"
                                 onSubmit={handleSubmit}
@@ -242,9 +246,9 @@ const StartUpgrade = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="build-container-submit-container">
+                                    <div className="start-upgrade-container-submit-container center">
                                         <button
-                                            className="btn waves-effect waves-light grey darken-3 build-container-submit right"
+                                            className="btn waves-effect waves-light grey darken-3 start-upgrade-submit"
                                             type="submit">
                                             {submit}
                                         </button>
