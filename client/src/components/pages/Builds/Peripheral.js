@@ -22,7 +22,7 @@ const Peripheral = (props) => {
             {/* Add Button */}
             <button
                 data-target={props.name}
-                className="peripheral modal-trigger btn waves-effect white black-text">
+                className="peripheral modal-trigger btn waves-effect z-depth-2 white black-text">
                 <i className="material-icons left">add</i>
                 Add {props.name}
             </button>

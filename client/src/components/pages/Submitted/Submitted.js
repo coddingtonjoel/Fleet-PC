@@ -12,7 +12,7 @@ const Submitted = () => {
             <a
                 href="/"
                 className="submitted-btn btn-large waves-effect grey-text text-darken-4 white darken-3">
-                Return to Home
+                Home
             </a>
         </div>
     );
