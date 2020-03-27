@@ -28,9 +28,9 @@ const About = () => {
                     properly give back to the community.
                     <br />
                     <br />I also love web development! I build this website
-                    using React, Sass, Materialize-CSS, and Node.js. You can
-                    check out my other projects on GitHub, or take a look at my
-                    LinkedIn profile!
+                    using React, Sass, Materialize-CSS, Material-UI, and
+                    Node.js. You can check out my other projects on GitHub, or
+                    take a look at my LinkedIn profile!
                 </p>
                 <div className="about-btn-container">
                     <a

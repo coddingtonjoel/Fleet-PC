@@ -2,7 +2,7 @@ import React from "react";
 
 const Preset = (props) => {
     return (
-        <div className="preset card-panel grey darken-3 z-depth-3">
+        <div className="preset grey darken-3 z-depth-3">
             <div className="preset-blur">
                 <div className="preset-img-container">
                     <img className="preset-img" src={props.img} alt="" />

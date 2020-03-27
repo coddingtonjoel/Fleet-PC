@@ -60,7 +60,7 @@ app.post("/send", (req, res) => {
             host: "smtp.aol.com",
             auth: {
                 user: "fleetpc@aol.com",
-                pass: "kpdjjwdtufcserja"
+                pass: process.env.EMAILPASS
             },
             tls: {
                 rejectUnauthorized: false
