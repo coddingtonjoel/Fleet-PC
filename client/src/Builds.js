@@ -303,7 +303,7 @@ const Builds = [
             price: 0
         },
         overview:
-            "The Galleon, although a mid-tier gaming machine, is still a solid choice for playing graphically intensive video games. Using a GTX 1660 graphics card, this machine is able to run high-performance games such as The Witcher 3 and GTA V at around 60 FPS and medium-performance games such as League of Legends at around 180 FPS.",
+            "The Galleon, although a mid-tier gaming machine, is still a solid choice for playing graphically intensive video games. Using a GTX 1660 SUPER graphics card, this machine is able to run high-performance games such as The Witcher 3 and GTA V at around 60 FPS and medium-performance games such as League of Legends at around 180 FPS.",
         people: ["Gamers", "Streamers", "Content Creators"]
     },
     {

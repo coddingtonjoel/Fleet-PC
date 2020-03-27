@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const StartUpgrade = () => {
     const [first, setFirst] = useState("");
@@ -8,7 +11,7 @@ const StartUpgrade = () => {
     const [city, setCity] = useState("");
     const [state, setState] = useState("");
     const [zipcode, setZipcode] = useState("");
-    const [select, setSelect] = useState([]);
+    const [select, setSelect] = useState("default");
     const [submit, setSubmit] = useState("Submit Build Request");
 
     //send post request to nodemailer
@@ -79,40 +82,67 @@ const StartUpgrade = () => {
                                 className="col s12"
                                 onSubmit={handleSubmit}
                                 action="/submitted">
-                                <div className="row parts-selector">
-                                    <div className="input-field start-upgrade-parts-selector input-field-white col s12">
-                                        <select
+                                <div className="row parts-selector grey darken-3">
+                                    <FormControl style={styles}>
+                                        <Select
+                                            style={styles}
+                                            className="start-upgrade-parts-selector"
+                                            labelId="demo-simple-select-label"
+                                            id="demo-simple-select"
+                                            value={select}
                                             onChange={(e) => {
                                                 setSelect(e.target.value);
-                                            }}
-                                            defaultValue={0}>
-                                            <option value="0" disabled>
-                                                Choose PC Part
-                                            </option>
-                                            <option value="Motherboard">
+                                                console.log(e.target.value);
+                                            }}>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"default"}
+                                                disabled
+                                                default>
+                                                Select a Part
+                                            </MenuItem>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"Motherboard"}>
                                                 Motherboard
-                                            </option>
-                                            <option value="CPU">
+                                            </MenuItem>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"CPU"}>
                                                 CPU (Processor)
-                                            </option>
-                                            <option value="GPU">
+                                            </MenuItem>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"GPU"}>
                                                 GPU (Graphics Card)
-                                            </option>
-                                            <option value="RAM">
+                                            </MenuItem>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"RAM"}>
                                                 RAM (Memory)
-                                            </option>
-                                            <option value="Storage">
+                                            </MenuItem>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"Storage"}>
                                                 Storage
-                                            </option>
-                                            <option value="Power Supply">
+                                            </MenuItem>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"PSU"}>
                                                 PSU (Power Supply Unit)
-                                            </option>
-                                            <option value="CPU Cooler">
+                                            </MenuItem>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"CPU Cooler"}>
                                                 CPU Cooler
-                                            </option>
-                                            <option value="Case">Case</option>
-                                        </select>
-                                    </div>
+                                            </MenuItem>
+                                            <MenuItem
+                                                style={menuItem}
+                                                value={"Case"}>
+                                                Case
+                                            </MenuItem>
+                                        </Select>
+                                    </FormControl>
                                 </div>
                                 <div className="infoform">
                                     <h2 className="infoform-head grey-text text-lighten-3 center">
@@ -262,6 +292,19 @@ const StartUpgrade = () => {
             <div> &nbsp;</div>
         </div>
     );
+};
+
+const styles = {
+    color: "white",
+    fontFamily: "'Chakra Petch', Sans Serif",
+    width: "100%",
+    fontSize: "1.8rem",
+    height: "5rem"
+};
+
+const menuItem = {
+    fontSize: "1.6rem",
+    fontFamily: "'Chakra Petch', Sans Serif"
 };
 
 export default StartUpgrade;
