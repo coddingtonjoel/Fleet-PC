@@ -1,5 +1,3 @@
-import secrets from "./secrets";
-
 require("dotenv").config();
 
 const express = require("express");
@@ -62,7 +60,7 @@ app.post("/send", (req, res) => {
             host: "smtp.aol.com",
             auth: {
                 user: "fleetpc@aol.com",
-                pass: secrets.pass
+                pass: "kpdjjwdtufcserja"
             },
             tls: {
                 rejectUnauthorized: false
