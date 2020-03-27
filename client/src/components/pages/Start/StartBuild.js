@@ -11,7 +11,7 @@ const StartBuild = () => {
     const [state, setState] = useState("");
     const [zipcode, setZipcode] = useState("");
     const [text, setText] = useState("");
-    const [submit, setSubmit] = useState("Submit Build Request");
+    const [submit, setSubmit] = useState("Submit Request");
 
     //send post request to nodemailer
     const handleSubmit = async (e) => {

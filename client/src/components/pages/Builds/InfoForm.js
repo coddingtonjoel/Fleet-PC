@@ -8,7 +8,7 @@ const InfoForm = (props) => {
     const [city, setCity] = useState("");
     const [state, setState] = useState("");
     const [zipcode, setZipcode] = useState("");
-    const [submit, setSubmit] = useState("Submit Build Request");
+    const [submit, setSubmit] = useState("Submit Request");
 
     //send post request to nodemailer
     const handleSubmit = async (e) => {
@@ -174,7 +174,7 @@ const InfoForm = (props) => {
             </div>
             <div className="build-container-submit-container">
                 <button
-                    className="btn waves-effect waves-light grey darken-4 build-container-submit right"
+                    className="btn waves-effect waves-light grey darken-4 start-build-submit right"
                     type="submit">
                     {submit}
                 </button>
