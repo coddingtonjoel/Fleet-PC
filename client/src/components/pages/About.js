@@ -6,13 +6,22 @@ const About = () => {
             <h2 className="about-head">About Fleet PC</h2>
             <div className="about-container">
                 <p className="about-body">
-                    Hi! My name is Joel Coddington and I've always been
-                    fascinated by computers. I am a computer science student at
-                    Biola University in La Mirada, CA; I built my first computer
-                    in 2017, and have build many for friends and family since
-                    then. I wanted to keep up building, but I didn't have anyone
-                    to build for! That's why I decided to start a small business
-                    for local PC builds.
+                    Here's how this all works. First, you'll submit a request,
+                    which will be reviewed. Afterwards, you will be contacted to
+                    confirm information about your request, and finally you will
+                    be sent an invoice through Square via email. You'll have 7
+                    days to pay the invoice, and once paid, the PC parts will be
+                    ordered and the process of shipment will begin. Windows 10
+                    will come preinstalled, along with necessary drivers.
+                    <br />
+                    <br />
+                    Aside from business banter, hey! My name is Joel Coddington
+                    and I've always been fascinated by computers. I am a
+                    computer science student at Biola University in La Mirada,
+                    CA; I built my first computer in 2017, and have build many
+                    for friends and family since then. I wanted to keep up
+                    building, but I didn't have anyone to build for! That's why
+                    I decided to start a small business for local PC builds.
                     <br />
                     <br />
                     My biggest problem with big companies that sell PCs is that
@@ -26,14 +35,6 @@ const About = () => {
                     you won't even know it. I think being honest is the best way
                     to fulfill needs of customers and to properly give back to
                     the community.
-                    <br />
-                    <br />
-                    Here's how this all works. First, you'll submit a request,
-                    which will be reviewed. Afterwards, you will be contacted to
-                    confirm some information, and then you will be sent an
-                    invoice on Square via email. You'll have 7 days to pay the
-                    invoice, and once paid, the PC parts will be ordered and the
-                    process of shipment will begin.
                     <br />
                     <br />I also love web development! I built this website
                     using React, Sass, Materialize-CSS, Material-UI, and

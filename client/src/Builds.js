@@ -69,8 +69,8 @@ const Builds = [
             price: 0
         },
         motherboard: {
-            title: "ASRock Z170A- X1",
-            price: 69.99
+            title: "ASRock H110M-HDS",
+            price: 51.99
         },
         memory: {
             title: "8GB DDR4 RAM",
@@ -182,7 +182,7 @@ const Builds = [
             price: 94.99
         },
         case: {
-            title: "Corsair 275R Airflow",
+            title: "Corsair 275R",
             price: 79.99
         },
         power: {
@@ -363,7 +363,7 @@ const Builds = [
             price: 384.99
         },
         graphics: {
-            title: "GeForce RTX 2080",
+            title: "GeForce RTX 2080 SUPER",
             price: 699.99
         },
         motherboard: {
@@ -399,7 +399,7 @@ const Builds = [
             price: 0
         },
         overview:
-            "The Battleship is a beast for running graphically intensive video games. Using a high-end graphics card, this machine is able to run high-performance games such as The Witcher 3: Wild Hunt and GTA V at around 120 FPS and medium-performance games such as League of Legends at around 250FPS.",
+            "The Battleship is a beast for running graphically intensive video games. Using a high-end, RTX 2080 SUPER graphics card, this machine is able to run high-performance games such as The Witcher 3: Wild Hunt and GTA V at around 120 FPS and medium-performance games such as League of Legends at around 250FPS.",
         people: ["Gamers", "Streamers", "Content Creators"]
     }
 ];
