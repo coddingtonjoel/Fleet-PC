@@ -48,6 +48,8 @@
             @include media(phone) {
                 position: absolute;
                 visibility: hidden;
+                top: 0;
+                left: -50%;
             }
         }
     }

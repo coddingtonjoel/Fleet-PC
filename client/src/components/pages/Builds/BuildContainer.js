@@ -52,7 +52,7 @@ const BuildContainer = (props) => {
     const local = JSON.parse(JSON.stringify(props));
 
     //construction and testing fee
-    const fee = 120;
+    const fee = 125;
 
     //calculate subtotal using the local object's JSON properties
     let subtotal =
@@ -67,12 +67,12 @@ const BuildContainer = (props) => {
         local.build.os.price +
         local.build.adapter.price;
 
-    const tax = subtotal * 0.095;
+    //const tax = subtotal * 0.095;
 
     //square invoice fee
-    const square = (subtotal + tax + fee) * 0.029 + 0.3;
+    //const square = (subtotal + tax + fee) * 0.029 + 0.3;
 
-    const total = fee + subtotal + tax + square;
+    const total = fee + subtotal;
 
     return (
         <Fragment>
@@ -179,25 +179,11 @@ const BuildContainer = (props) => {
                                 </span>
                             </li>
                             <li>
-                                <span className="bold">Tax: </span>
-                                <span className="right">
-                                    ${formatCurrency(tax, opts)}
-                                </span>
-                            </li>
-                            <li>
                                 <span className="bold">
-                                    Construction & Testing:{" "}
+                                    Construction & Installation:{" "}
                                 </span>
                                 <span className="right">
                                     ${fee.toPrecision(5)}
-                                </span>
-                            </li>
-                            <li>
-                                <span className="bold">
-                                    Square Processing Fee:{" "}
-                                </span>
-                                <span className="right">
-                                    ${formatCurrency(square, opts)}
                                 </span>
                             </li>
                             <hr />

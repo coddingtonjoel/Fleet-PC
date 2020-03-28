@@ -19,15 +19,23 @@ const About = () => {
                     you never know where you money is going. You are never sure
                     how much of your money is <em>actually</em> going to the
                     parts rather than to the manufacturer. Fleet PC uses Newegg
-                    Business for consistent retail prices and suppliers. With
-                    the display of prices on my custom presets, I want my
-                    customers to be fully aware of exactly how their money is
-                    divided. Some manufacturers could take hundreds of dollars
-                    in profit and you won't even know it. I think being honest
-                    is the best way to fulfill needs of customers and to
-                    properly give back to the community.
+                    for consistent retail prices and suppliers. With the display
+                    of prices on my custom presets, I want my customers to be
+                    fully aware of exactly how their money is divided. Some
+                    manufacturers could take hundreds of dollars in profit and
+                    you won't even know it. I think being honest is the best way
+                    to fulfill needs of customers and to properly give back to
+                    the community.
                     <br />
-                    <br />I also love web development! I build this website
+                    <br />
+                    Here's how this all works. First, you'll submit a request,
+                    which will be reviewed. Afterwards, you will be contacted to
+                    confirm some information, and then you will be sent an
+                    invoice on Square via email. You'll have 7 days to pay the
+                    invoice, and once paid, the PC parts will be ordered and the
+                    process of shipment will begin.
+                    <br />
+                    <br />I also love web development! I built this website
                     using React, Sass, Materialize-CSS, Material-UI, and
                     Node.js. You can check out my other projects on GitHub, or
                     take a look at my LinkedIn profile!
