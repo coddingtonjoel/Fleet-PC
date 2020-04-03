@@ -1,22 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Start = () => {
     return (
         <div className="start">
-            <a
-                href="/build"
+            <Link
+                to="/build"
                 className="start-link btn z-depth-3 waves-effect waves-light">
                 <div className="start-btn waves-effect">
                     <p className="valign-wrapper">Build a PC</p>
                 </div>
-            </a>
-            <a
-                href="/upgrade"
+            </Link>
+            <Link
+                to="/upgrade"
                 className="start-link start-link-upgrade btn z-depth-3 waves-effect waves-light">
                 <div className="start-btn waves-effect">
                     <p className="valign-wrapper">Upgrade a PC</p>
                 </div>
-            </a>
+            </Link>
         </div>
     );
 };

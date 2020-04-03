@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -30,16 +31,16 @@ const Footer = () => {
                             <i className="fab fa-github">&nbsp;&nbsp;&nbsp;</i>
                             GitHub
                         </a>
-                        <a
-                            href="/contact"
+                        <Link
+                            to="/contact"
                             className="footer-link-icon z-depth-0 btn white-text grey center darken-4 white-text waves-effect waves-light">
                             Contact
-                        </a>
-                        <a
-                            href="/about"
+                        </Link>
+                        <Link
+                            to="/about"
                             className="footer-link-icon z-depth-0 btn white-text grey center darken-4 white-text waves-effect waves-light">
                             About
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

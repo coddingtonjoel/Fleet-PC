@@ -13,10 +13,12 @@ import StartUpgrade from "./components/pages/Start/StartUpgrade";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import page404 from "./components/pages/404";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Fragment>
                 <Navbar />
                 <Switch>

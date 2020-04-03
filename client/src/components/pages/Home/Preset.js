@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Preset = (props) => {
     return (
@@ -12,11 +13,11 @@ const Preset = (props) => {
                     {props.subtitle}
                 </p>
             </div>
-            <a
-                href={`/${props.title}`}
+            <Link
+                to={`/${props.title}`}
                 className="preset-btn btn white black-text waves-effect">
                 View
-            </a>
+            </Link>
         </div>
     );
 };
