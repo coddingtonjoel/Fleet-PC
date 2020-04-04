@@ -19,7 +19,7 @@ function App() {
     return (
         <Router>
             <ScrollToTop />
-            <Fragment>
+            <Fragment className="Pace">
                 <Navbar />
                 <Switch>
                     <Route exact path="/" component={Home} />
