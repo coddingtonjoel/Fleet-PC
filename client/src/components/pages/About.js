@@ -25,7 +25,7 @@ const About = () => {
                     <br />
                     <br />
                     My biggest problem with big companies that sell PCs is that
-                    you never know where you money is going. You are never sure
+                    you never know where your money is going. You are never sure
                     how much of your money is <em>actually</em> going to the
                     parts rather than to the manufacturer. Fleet PC uses Newegg
                     for consistent retail prices and suppliers. With the display
