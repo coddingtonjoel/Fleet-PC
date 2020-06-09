@@ -223,12 +223,12 @@ const Builds = [
             price: 159.99,
         },
         motherboard: {
-            title: "MSI B360",
-            price: 99.99,
+            title: "MSI PRO B365M",
+            price: 69.99,
         },
         memory: {
             title: "8GB DDR4 RAM",
-            price: 38.99,
+            price: 30.99,
         },
         storage: {
             title: "240GB SSD",
@@ -239,8 +239,8 @@ const Builds = [
             price: 59.99,
         },
         power: {
-            title: "EVGA BR 500 W",
-            price: 53.99,
+            title: "EVGA BR 450 W",
+            price: 59.99,
         },
         cooler: {
             title: "Cooler Master Hyper 212 EVO",
