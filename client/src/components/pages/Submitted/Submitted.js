@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Submitted = () => {
     return (
@@ -10,11 +9,11 @@ const Submitted = () => {
                     We will be in contact with you shortly.
                 </p>
             </h1>
-            <Link
-                to="/"
+            <a
+                href="/"
                 className="submitted-btn btn-large waves-effect grey-text text-darken-4 white darken-3">
                 Home
-            </Link>
+            </a>
         </div>
     );
 };

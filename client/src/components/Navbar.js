@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect } from "react";
-import { Link } from "react-router-dom";
 import M from "materialize-css";
 import logo from "../images/Logo@2x.png";
 
@@ -13,9 +12,9 @@ const Navbar = () => {
         <Fragment>
             <nav className="navbar grey darken-4">
                 <div className="nav-wrapper container">
-                    <Link to="/" className="brand-logo">
+                    <a href="/" className="brand-logo">
                         <img className="nav-logo" src={logo} alt="logo" />
-                    </Link>
+                    </a>
                     <a
                         href="#!"
                         data-target="mobile-sidenav"
@@ -24,32 +23,32 @@ const Navbar = () => {
                     </a>
                     <ul className="right hide-on-med-and-down">
                         <li>
-                            <Link
+                            <a
                                 className="btn-flat waves-effect waves-light white-text navtext"
-                                to="/build">
+                                href="/build">
                                 Build
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
+                            <a
                                 className="btn-flat waves-effect waves-light white-text navtext"
-                                to="/upgrade">
+                                href="/upgrade">
                                 Upgrade
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
+                            <a
                                 className="btn-flat waves-effect waves-light white-text navtext"
-                                to="/contact">
+                                href="/contact">
                                 Contact
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
+                            <a
                                 className="btn-flat waves-effect waves-light white-text navtext"
-                                to="/about">
+                                href="/about">
                                 About
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -57,32 +56,32 @@ const Navbar = () => {
 
             <ul className="sidenav grey darken-4" id="mobile-sidenav">
                 <li>
-                    <Link
+                    <a
                         className="sidenav-text grey darken-4 white-text waves-light waves-effect"
-                        to="/build">
+                        href="/build">
                         Build
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link
+                    <a
                         className="sidenav-text grey darken-4 white-text waves-light waves-effect"
-                        to="/upgrade">
+                        href="/upgrade">
                         Upgrade
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link
+                    <a
                         className="sidenav-text grey darken-4 white-text waves-light waves-effect"
-                        to="/contact">
+                        href="/contact">
                         Contact
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link
+                    <a
                         className="sidenav-text grey darken-4 white-text waves-light waves-effect"
-                        to="/about">
+                        href="/about">
                         About
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </Fragment>

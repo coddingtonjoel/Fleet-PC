@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Hook = () => {
     return (
@@ -14,12 +13,12 @@ const Hook = () => {
                         service.
                     </h5>
                     <div className="hook-btn-container">
-                        <Link to="/build" className="hook-btn build">
+                        <a href="/build" className="hook-btn build">
                             <p>Build a PC</p>
-                        </Link>
-                        <Link to="/upgrade" className="hook-btn upgrade">
+                        </a>
+                        <a href="/upgrade" className="hook-btn upgrade">
                             <p>Upgrade a PC</p>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
