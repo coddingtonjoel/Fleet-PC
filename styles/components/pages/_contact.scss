@@ -76,7 +76,7 @@
         @media (max-width: 900px) {
             transform: translateY(5rem);
         }
-
+      
         &-bottom {
             margin-bottom: 3rem !important;
         }
@@ -87,6 +87,10 @@
         color: white;
         padding: 3%;
         font-size: 2rem;
+
+        @media (max-width: 442px) {
+            font-size: 2.5rem;
+        }
 
         &-email {
             color: rgb(253, 112, 99);
