@@ -1,0 +1,95 @@
+.start-build {
+    background-image: url("/parts3.jpg");
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    padding-top: 15rem;
+
+    &-container {
+        height: 100%;
+        margin: 0 3%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: rgb(34, 34, 34);
+        padding: 3rem 0;
+        border-radius: 12px;
+        margin-bottom: 10rem;
+
+        @media (max-width: 355px) {
+            margin-bottom: 15rem;
+        }
+
+        &-bottom {
+            margin-bottom: 3rem !important;
+        }
+    }
+
+    &-submit {
+        font-family: "Chakra Petch", sans-serif;
+        letter-spacing: 0.1rem;
+        height: 6rem;
+        width: 28rem;
+        border-radius: 8px;
+        margin-bottom: 4rem;
+
+        &-container {
+            margin-top: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+//change materialize textarea default form colors
+.input-field-white {
+    width: 80vw !important;
+
+    & textarea {
+        color: white !important;
+    }
+
+    & textarea:focus + label {
+        color: white !important;
+    }
+}
+
+/* label underline focus color */
+.row .input-field-white textarea:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important;
+    color: white;
+}
+
+.text-field-white {
+    & input {
+        color: white !important;
+    }
+
+    & input:focus + label {
+        color: white !important;
+    }
+}
+
+/* label underline focus color */
+.text-field-white input:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important;
+    color: white;
+}
+
+.build-textarea {
+    padding-top: 2rem !important;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
