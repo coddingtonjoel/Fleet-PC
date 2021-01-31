@@ -24,16 +24,6 @@ const Seo = () => {
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"></link>
             <link
-                href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap"
-                rel="stylesheet"
-            />
-
-            <link
-                href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap"
-                rel="stylesheet"
-            />
-
-            <link
                 href="https://fonts.googleapis.com/icon?family=Material+Icons"
                 rel="stylesheet"
             />
