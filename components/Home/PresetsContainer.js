@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import Preset from "./Preset";
+import data from "../../builds.json";
 
-const PresetsContainer = ({ data }) => {
+const PresetsContainer = () => {
     return (
         <div className="presets">
             <div>

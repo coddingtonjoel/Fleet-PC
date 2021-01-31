@@ -58,7 +58,7 @@
 
     &-container {
         height: 100%;
-        margin: 0 3%;
+        margin: 0 15%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -69,6 +69,11 @@
         border-radius: 12px;
         margin-top: 15rem;
 
+        @media (max-width: 900px) {
+            margin: 0 10%;
+            margin-top: 15rem;
+        }
+      
         &-bottom {
             margin-bottom: 3rem !important;
         }
@@ -78,7 +83,7 @@
         font-family: "Chakra Petch", sans-serif;
         color: white;
         padding: 3% 12%;
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         margin-bottom: 4rem;
     }
 
