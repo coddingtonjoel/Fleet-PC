@@ -1,0 +1,112 @@
+.about {
+    background-image: url("/parts7.jpg");
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding-top: 10rem;
+
+    &-head {
+        position: absolute;
+        top: 14rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 4rem;
+        width: 65%;
+        padding: 2% 0;
+
+        @media (max-width: 720px) {
+            width: 100%;
+            padding: 4% 0;
+            font-size: 3.5rem;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: #d53369; /* fallback for old browsers */
+            background: -webkit-linear-gradient(
+                to right,
+                #eec75e,
+                #d53369
+            ); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(
+                to right,
+                #f5bc41,
+                #d53369
+            ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+
+            @media (max-width: 720px) {
+                clip-path: none;
+            }
+        }
+    }
+
+    &-container {
+        height: 100%;
+        margin: 0 3%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: rgb(34, 34, 34);
+        padding: 3rem 0;
+        border-radius: 12px;
+        margin-top: 15rem;
+
+        &-bottom {
+            margin-bottom: 3rem !important;
+        }
+    }
+
+    &-body {
+        font-family: "Chakra Petch", sans-serif;
+        color: white;
+        padding: 3% 12%;
+        font-size: 2.2rem;
+        margin-bottom: 4rem;
+    }
+
+    &-btn {
+        font-size: 1.5rem;
+        width: 20rem;
+        border-radius: 8px;
+        margin: 0 5rem;
+        margin-bottom: 2rem;
+
+        @media (max-width: 500px) {
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+
+        @media (max-width: 420px) {
+            flex: 0 0 80%;
+        }
+    }
+
+    &-btn-container {
+        font-family: "Chakra Petch", sans-serif !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 500px) {
+            flex-wrap: wrap;
+        }
+    }
+}
