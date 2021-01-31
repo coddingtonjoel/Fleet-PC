@@ -8,7 +8,7 @@ const Footer = () => {
                     <div>
                         <h4 className="footer-head center">FLEET PC</h4>
                         <p className="footer-copyright-text center">
-                            © 2020 Joel Coddington
+                            © {new Date().getFullYear()} Joel Coddington
                         </p>
                     </div>
                     <div className="center footer-link-container">
