@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from "react";
 import Preset from "../../components/Home/Preset";
+import data from "../../builds.json";
 
-const Build = ({ data }) => {
+const Build = () => {
     const [first, setFirst] = useState("");
     const [last, setLast] = useState("");
     const [email, setEmail] = useState("");
@@ -239,19 +240,3 @@ const Build = ({ data }) => {
 };
 
 export default Build;
-
-export const getStaticProps = async () => {
-    // get selected build
-    const host =
-        process.env.NODE_ENV === "development"
-            ? "http://localhost:3000"
-            : "https://fleetpc.org";
-    const res = await fetch(`${host}/builds.json`);
-    const data = await res.json();
-
-    return {
-        props: {
-            data,
-        },
-    };
-};
