@@ -13,11 +13,11 @@ const Preset = props => {
                     {props.subtitle}
                 </p>
             </div>
-            <a
-                href={`/build/${props.title.toLowerCase()}`}
-                className="preset-btn btn white black-text waves-effect">
-                View
-            </a>
+            <Link href={`/build/${props.title.toLowerCase()}`}>
+                <a className="preset-btn btn white black-text waves-effect">
+                    View
+                </a>
+            </Link>
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Header = () => {
     return (
@@ -11,11 +12,11 @@ const Header = () => {
                 </h1>
                 <p className="header-main-sub">Based in Southern California</p>
             </div>
-            <a
-                href="/build"
-                className="header-btn btn-large waves-effect grey-text text-darken-4 white darken-3">
-                Start Now
-            </a>
+            <Link href="/build">
+                <a className="header-btn btn-large waves-effect grey-text text-darken-4 white darken-3">
+                    Start Now
+                </a>
+            </Link>
         </div>
     );
 };

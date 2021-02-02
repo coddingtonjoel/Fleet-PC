@@ -71,6 +71,7 @@ const Navbar = () => {
                 className="nav-drawer"
                 anchor={"left"}
                 open={isOpen}
+                onClick={() => setIsOpen(false)}
                 onClose={() => {
                     setIsOpen(false);
                 }}>

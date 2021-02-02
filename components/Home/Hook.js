@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Hook = () => {
     return (
@@ -13,12 +14,16 @@ const Hook = () => {
                         service.
                     </h5>
                     <div className="hook-btn-container">
-                        <a href="/build" className="hook-btn build">
-                            <p>Build a PC</p>
-                        </a>
-                        <a href="/upgrade" className="hook-btn upgrade">
-                            <p>Upgrade a PC</p>
-                        </a>
+                        <Link href="/build">
+                            <a className="hook-btn build">
+                                <p>Build a PC</p>
+                            </a>
+                        </Link>
+                        <Link href="/upgrade">
+                            <a className="hook-btn upgrade">
+                                <p>Upgrade a PC</p>
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
